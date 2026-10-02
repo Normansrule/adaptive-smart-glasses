@@ -1,5 +1,5 @@
 // Offline cache for the installable viewer app. Bump VERSION after rebuilding models.
-const VERSION = 'asg-v2';
+const VERSION = 'asg-v1790969556';
 const CORE = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icons/icon.svg',
   'icons/icon-192.png', 'icons/icon-512.png', 'vendor/three/three.module.min.js',
   'vendor/three/addons/controls/OrbitControls.js', 'vendor/three/addons/loaders/STLLoader.js',
