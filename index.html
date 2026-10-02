@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adaptive Smart Glasses</title>
+<meta name="description" content="Camera-free, push-to-talk smart glasses prototype: interactive 3D model, print files, BOM and wiring.">
+<meta name="theme-color" content="#0f1216">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three/three.module.min.js",
+               "three/addons/": "./vendor/three/addons/" } }
+</script>
+</head>
+<body>
+<header class="bar">
+  <div class="brand">
+    <svg viewBox="0 0 64 32" aria-hidden="true"><rect x="3" y="7" width="24" height="17" rx="6"/><rect x="37" y="7" width="24" height="17" rx="6"/><path d="M27 13h10"/></svg>
+    <div><h1>Adaptive Smart Glasses</h1><p>camera-free · push-to-talk · P1S-printable</p></div>
+  </div>
+  <nav class="links">
+    <a id="repoLink" href="#" target="_blank" rel="noopener">Repo</a>
+    <a id="zipLink" href="#">Download all</a>
+    <button id="installBtn" hidden>Install app</button>
+  </nav>
+</header>
+
+<main>
+  <section class="stage">
+    <canvas id="view" aria-label="3D model of the glasses"></canvas>
+    <div class="hud-tools">
+      <div class="seg" role="group" aria-label="Camera">
+        <button data-view="iso" class="on">Iso</button><button data-view="front">Front</button>
+        <button data-view="top">Top</button><button data-view="side">Side</button>
+      </div>
+      <label class="slider">Explode <input id="explode" type="range" min="0" max="1" step="0.01" value="0"></label>
+      <label class="chk"><input id="showHud" type="checkbox" checked> HUD optics</label>
+    </div>
+    <div id="loading" class="loading">Loading meshes…</div>
+    <aside id="pick" class="pick" hidden></aside>
+  </section>
+
+  <section class="panel">
+    <div class="tabs" role="tablist">
+      <button role="tab" data-tab="parts" class="on">Parts</button>
+      <button role="tab" data-tab="bom">BOM</button>
+      <button role="tab" data-tab="wiring">Wiring</button>
+      <button role="tab" data-tab="build">Build</button>
+    </div>
+
+    <div class="tab" id="tab-parts">
+      <p class="lede">10 printed parts + 1 coupon. Every part prints support-free on a Bambu Lab P1S (also A1 / A1 Mini).</p>
+      <div class="plates">
+        <a href="cad/plates/plate_0_tolerance_coupon.3mf" download>0 · Coupon</a>
+        <a href="cad/plates/plate_1_core_petg.3mf" download>1 · Core PETG</a>
+        <a href="cad/plates/plate_2_tpu_grips.3mf" download>2 · TPU grips</a>
+        <a href="cad/plates/plate_3_hud_petg_EXPERIMENTAL.3mf" download>3 · HUD (exp.)</a>
+      </div>
+      <ul id="partList" class="parts"></ul>
+    </div>
+
+    <div class="tab" id="tab-bom" hidden>
+      <div id="bomTotals" class="totals"></div>
+      <div id="bomTable"></div>
+    </div>
+
+    <div class="tab" id="tab-wiring" hidden>
+      <p><a href="docs/img/wiring_power.svg" target="_blank"><img class="dia-img" src="docs/img/wiring_power.svg" alt="Power and privacy wiring diagram"></a>
+      <a href="docs/img/wiring_signals.svg" target="_blank"><img class="dia-img" src="docs/img/wiring_signals.svg" alt="Signal wiring diagram"></a></p>
+      <p class="note">Tap a diagram to open it full size.</p>
+      <h3>Mic privacy (hardware)</h3>
+      <pre class="dia">3V3 ─► PTT switch ─► MIC_3V3 ─┬─► mic VDD
+                             ├─► 1k ─► red LED ─► GND
+                             └─► 1N4148 ─► D1 (sense)</pre>
+      <p class="note">Releasing PTT leaves the mic with no power at all. The diode stops firmware from back-powering the mic or LED.</p>
+      <h3>Power</h3>
+      <pre class="dia">USB-C ─► 6106 (bq25185 + 5 V boost) ⇄ LiPo + NTC
+5V_RAW ─► main switch ─► 5V_SW ─► 1N5817 ─► XIAO 5V
+                              └─► 2 × MAX98357A</pre>
+      <h3>XIAO ESP32-S3 pins</h3>
+      <table class="mini">
+        <tr><th>Pin</th><th>Net</th></tr>
+        <tr><td>D0</td><td>VBAT sense (100k/100k)</td></tr>
+        <tr><td>D1</td><td>PTT sense (via 1N4148)</td></tr>
+        <tr><td>D2 / D3</td><td>Amp SD: bone / outward</td></tr>
+        <tr><td>D4 / D5</td><td>I²C SDA / SCL (Qwiic chain)</td></tr>
+        <tr><td>D6</td><td>MEDIA_EN (safety-owned, LOW default)</td></tr>
+        <tr><td>D7</td><td>I²S DIN ← mic</td></tr>
+        <tr><td>D8 / D9</td><td>I²S BCLK / WS (shared)</td></tr>
+        <tr><td>D10</td><td>I²S DOUT → amps</td></tr>
+      </table>
+      <p><a class="doc" data-doc="docs/pinout.md" href="docs/pinout.md">Every pin, every module →</a><br><a href="hardware/netlist.csv" download>netlist.csv</a> · <a href="hardware/wire_cut_list.csv" download>wire_cut_list.csv</a></p>
+    </div>
+
+    <div class="tab" id="tab-build" hidden>
+      <ol class="phases">
+        <li><b>Bench electronics</b> I²C, I²S, PTT power gating, LED, BLE, safety state machine</li>
+        <li><b>Power</b> charge, NTC cut-off, brownout, load sharing, max audio</li>
+        <li><b>Print + fit</b> coupon first, then plate 1; comfort, balance, 2,000-cycle hinge test</li>
+        <li><b>Depth</b> ToF zone map, false positives/negatives</li>
+        <li><b>One-eye HUD</b> <span class="chip exp">EXPERIMENTAL</span> focus, eyebox, combiner angle</li>
+        <li><b>AI / translation</b> PTT → phone ASR → AI → HUD + bone</li>
+        <li><b>Driving safety</b> GNSS + IMU fusion, MEDIA_EN low, app can't override</li>
+        <li><b>Flight mode</b> low pressure only prompts</li>
+        <li><b>Media</b> <span class="chip exp">EXPERIMENTAL</span> Pi Zero 2 W gated by MEDIA_EN</li>
+        <li><b>Custom PCB</b> shrink the pods after the modules prove out</li>
+      </ol>
+      <p class="links-docs">
+        <a class="doc" data-doc="docs/manufacturing.md" href="docs/manufacturing.md">Manufacturing guide + QA sheet</a>
+        <a class="doc" data-doc="docs/requirements.md" href="docs/requirements.md">Requirements + verification</a>
+        <a class="doc" data-doc="docs/README_CAD.md" href="docs/README_CAD.md">Print + assembly guide</a>
+        <a class="doc" data-doc="docs/customization.md" href="docs/customization.md">Customize (config.scad)</a>
+        <a class="doc" data-doc="docs/design_changes.md" href="docs/design_changes.md">What changed vs brief</a>
+        <a class="doc" data-doc="docs/build_brief.md" href="docs/build_brief.md">Master brief</a>
+      </p>
+    </div>
+  </section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+{
+ "combiner_arm": {
+  "bbox_mm": [
+   33.6,
+   29.0,
+   4.5
+  ],
+  "triangles": 1304,
+  "solid_volume_cm3": 0.57,
+  "material": "PETG",
+  "solid_mass_g": 0.7,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ },
+ "display_slider": {
+  "bbox_mm": [
+   26.0,
+   26.0,
+   4.0
+  ],
+  "triangles": 144,
+  "solid_volume_cm3": 2.09,
+  "material": "PETG",
+  "solid_mass_g": 2.6,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ },
+ "ear_grip_left": {
+  "bbox_mm": [
+   8.8,
+   9.2,
+   37.9
+  ],
+  "triangles": 1290,
+  "solid_volume_cm3": 1.15,
+  "material": "TPU 95A",
+  "solid_mass_g": 1.4,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ },
+ "ear_grip_right": {
+  "bbox_mm": [
+   14.8,
+   17.7,
+   37.9
+  ],
+  "triangles": 1420,
+  "solid_volume_cm3": 2.46,
+  "material": "TPU 95A",
+  "solid_mass_g": 3.0,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ },
+ "frame": {
+  "bbox_mm": [
+   142.0,
+   52.6,
+   14.8
+  ],
+  "triangles": 4588,
+  "solid_volume_cm3": 20.02,
+  "material": "PETG",
+  "solid_mass_g": 25.4,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ },
+ "lid_left": {
+  "bbox_mm": [
+   23.0,
+   88.2,
+   2.9
+  ],
+  "triangles": 1316,
+  "solid_volume_cm3": 2.81,
+  "material": "PETG",
+  "solid_mass_g": 3.6,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ },
+ "lid_right": {
+  "bbox_mm": [
+   23.0,
+   88.2,
+   2.9
+  ],
+  "triangles": 1692,
+  "solid_volume_cm3": 2.8,
+  "material": "PETG",
+  "solid_mass_g": 3.6,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ },
+ "optics_tower": {
+  "bbox_mm": [
+   37.2,
+   29.6,
+   63.0
+  ],
+  "triangles": 1860,
+  "solid_volume_cm3": 10.78,
+  "material": "PETG",
+  "solid_mass_g": 13.7,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ },
+ "temple_left": {
+  "bbox_mm": [
+   46.6,
+   128.7,
+   11.0
+  ],
+  "triangles": 1936,
+  "solid_volume_cm3": 6.23,
+  "material": "PETG",
+  "solid_mass_g": 7.9,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ },
+ "temple_right": {
+  "bbox_mm": [
+   46.6,
+   128.7,
+   11.0
+  ],
+  "triangles": 2608,
+  "solid_volume_cm3": 6.23,
+  "material": "PETG",
+  "solid_mass_g": 7.9,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ },
+ "tolerance_coupon": {
+  "bbox_mm": [
+   78.0,
+   30.0,
+   6.0
+  ],
+  "triangles": 14920,
+  "solid_volume_cm3": 12.42,
+  "material": "PETG",
+  "solid_mass_g": 15.8,
+  "watertight": true,
+  "open_edges": 0,
+  "fits_P1S": true,
+  "fits_A1_mini": true
+ }
+}

@@ -1,0 +1,27 @@
+subsystem,item,part_or_example,qty,approx_unit_usd,tier,engineering_notes,source_url
+Core MCU,Seeed Studio XIAO ESP32-S3,XIAO ESP32-S3,1,7.49,CORE,BLE/Wi-Fi MCU; use non-Sense version to avoid an unwanted camera.,https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/
+Depth sensing,SparkFun Qwiic Mini ToF Imager,VL53L5CX / SEN-19013,1,25.95,CORE,64-zone 8x8 ToF; bridge-mounted; no image camera.,https://www.sparkfun.com/sparkfun-qwiic-mini-tof-imager-vl53l5cx.html
+Motion,ICM-42688-P breakout,ICM-42688-P,1,15.0,CORE,6-axis IMU; any compact 3.3V I2C breakout is acceptable.,https://www.invensense.tdk.com/en-us/products/6-axis/icm-42688-p
+Pressure,BMP390 breakout,BMP390,1,10.99,CORE,Pressure trend for flight-mode suggestion; not sole aircraft detector.,https://www.bosch-sensortec.com/en/products/environmental-sensors/pressure-sensors/bmp390
+Ambient,SHT40 breakout,SHT40,1,5.95,CORE,Ambient temperature/humidity; mount in a ventilated outer pod away from skin.,https://www.adafruit.com/product/4885
+Microphone,I2S MEMS microphone breakout,SPH0645LM4H,1,6.95,CORE,Powered only by physical PTT switch.,https://www.adafruit.com/product/3421
+Audio amp,I2S Class-D amplifier,MAX98357A,2,5.95,CORE,"One amp for bone path, one for outward speakers; independent SD control.",https://www.adafruit.com/product/3006
+Bone audio,8 ohm 1 W bone-conduction transducer,8R 1W,2,8.0,CORE,Mount near mastoid via compliant TPU carrier; do not clamp hard.,https://www.adafruit.com/product/1674
+Open audio,8 ohm 1–2 W micro speaker,8R 1-2W,2,4.0,CORE,Directional/open-ear outward audio; keep volume conservative.,https://www.adafruit.com/category/271
+Charging,USB-C Li-ion/LiPo charger with load sharing,BQ24074 breakout,1,14.95,CORE,External charger preferred; set charge current to match the pack; add NTC.,https://learn.adafruit.com/adafruit-bq24074-universal-usb-dc-solar-charger-breakout
+Battery,Protected 1S LiPo 1200 mAh,3.7V 1200mAh,1,9.95,CORE,Rear/side pod; use a protected pack from a reputable supplier.,https://www.adafruit.com/category/574
+5V regulator,"5V boost converter, >=1 A core mode",TPS61023-class,1,6.0,CORE,Feeds 5V system/audio rail; media pod uses its own higher-current supply.,https://www.adafruit.com/category/578
+Battery thermal,10k NTC thermistor,10k NTC,1,1.0,CORE,Bond to pouch cell; use charger TS/thermistor input when supported.,https://www.adafruit.com/category/66
+Privacy control,DPST momentary pushbutton,PTT switch,1,4.0,CORE,Pole A switches microphone rail; Pole B is MCU PTT sense.,https://www.digikey.com/en/products/filter/pushbutton-switches/199
+Power control,SPST/DPST slide switch,MAIN POWER,1,2.0,CORE,Physical on/off between charger load output and system regulator.,https://www.digikey.com/en/products/filter/slide-switches/213
+Privacy indicator,Red LED + 1k resistor,MIC ON,1,0.25,CORE,Wired directly to switched microphone rail.,
+Harness,28–32 AWG silicone wire + JST-SH/Qwiic pigtails,Harness,1,10.0,CORE,Use strain relief at both hinges.,
+Fasteners,M2 x 5/6 mm screws + M2 heat-set inserts,M2,1,8.0,CORE,Serviceable covers and pods.,
+Soft grip,95A TPU + 1–2 mm silicone/memory foam tape,Ear grip,1,8.0,CORE,Printed TPU shell with replaceable inward foam strip.,
+Combiner optics,Optical-grade partial reflector / beam splitter,~30R/70T,2,25.0,HUD,Do not use printed transparent plastic for final optics.,
+HUD display,Compact micro-OLED + collimator/driver,640x400-class,1,99.0,HUD,Start monocular; controller compatibility must be confirmed before purchase.,
+HUD optics,Collimating/aspheric lens + adjustable holder,20–25 mm class,1,20.0,HUD,Tune focal position and eyebox experimentally.,
+Media compute,Raspberry Pi Zero 2 W,SC0510,1,14.99,MEDIA,Optional H.264 media renderer; core MCU remains safety authority.,https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/
+Media display,High-resolution micro-OLED + HDMI/MIPI controller,720p/1080p class,1,150.0,MEDIA,Prototype one eye before buying the second display.,
+Media power,Protected 1S LiPo 2000–3000 mAh + 5V >=2A regulator,rear media pack,1,25.0,MEDIA,Separate rear pod improves thermal balance; charge with matched safe charger.,
+Media storage,microSD 32 GB,A1/A2 card,1,7.0,MEDIA,OS and cached media/translation assets for Pi-based mode.,

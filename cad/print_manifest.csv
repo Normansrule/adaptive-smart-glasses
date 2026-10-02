@@ -1,0 +1,12 @@
+part,material,tier,orientation,supports,layer_mm,walls,infill,plate_3mf,notes,bbox_mm,solid_mass_g,fits_A1_mini
+tolerance_coupon,PETG,print FIRST,flat,none,0.16,4,30% gyroid,plate_0,"Tune tol, insert_hole_d, tube_hole_glue/run and the PCB slot. Set the winners in config.scad and rebuild.",78.0x30.0x6.0,15.8,True
+frame,PETG,CORE,front face down,none,0.16,4,30% gyroid,plate_1,"Ream the knuckle bores to 4.35 mm (rotating fit). Fit 2 inserts in the brow front only if you're adding the HUD. Holds the ToF, BME280, PTT, LED and main switch.",142.0x52.6x14.8,25.4,True
+temple_left,PETG,CORE,inner (head) face down,none,0.16,4,30% gyroid,plate_1,Battery + charger pod. Drill the knuckle to 4.05 and glue the tube. Fit 1 insert in the rib.,46.6x128.7x11.0,7.9,True
+temple_right,PETG,CORE,inner (head) face down,none,0.16,4,30% gyroid,plate_1,Compute + audio pod with speaker grille. Drill the knuckle to 4.05 and glue the tube. Fit 1 insert in the rib.,46.6x128.7x11.0,7.9,True
+lid_left,PETG,CORE,outer face down,none,0.16,3,25% gyroid,plate_1,"Slide the front tab under the lip, then fit 1x M2x5. Vents sit over the charger.",23.0x88.2x2.9,3.6,True
+lid_right,PETG,CORE,outer face down,none,0.16,3,25% gyroid,plate_1,Same fitting as the left lid. Vents sit over the XIAO. 2 mm mic port.,23.0x88.2x2.9,3.6,True
+ear_grip_left,TPU 95A,CORE,entry end down,none,0.20,3,20% gyroid,plate_2,"Interference sleeve. Push it on with a drop of IPA. Feed TPU from the external spool, not the AMS.",8.8x9.2x37.9,1.4,True
+ear_grip_right,TPU 95A,CORE,entry end down,none (14 mm TPU bridge at pocket top),0.20,3,20% gyroid,plate_2,The bone transducer presses into the open-face cradle. Run its wires through the hole into the earpiece groove.,14.8x17.7x37.9,3.0,True
+optics_tower,PETG black,HUD EXPERIMENTAL,upside down (top on bed),none,0.16,4,30% gyroid,plate_3,"Lens press-fit seat, display slider bore, focus slot, combiner fork. 2x M2x6 into the brow inserts.",37.2x29.6x63.0,13.7,True
+display_slider,PETG black,HUD EXPERIMENTAL,display pocket up,none,0.16,3,100%,plate_3,Holds the micro-OLED face down. Clamp with M2x6 through the tower slot.,26.0x26.0x4.0,2.6,True
+combiner_arm,PETG,HUD EXPERIMENTAL,"flat, pocket up",none,0.12,3,100%,plate_3,Glue the 25 mm glass in with 3 dots of UV or silicone. Pivot on 2x M2x4. Range 35-50 deg.,33.6x29.0x4.5,0.7,True

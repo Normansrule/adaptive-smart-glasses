@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 720" width="1160" height="720" font-family="Helvetica,Arial,sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="24" y="40" font-size="24" font-weight="700" fill="#14181d">Hollow-pin hinge (cut through the axis)</text>
+<text x="24" y="64" font-size="14" fill="#5d6773">The wires go through the brass tube, so folding twists them about 90° along 13 mm instead of bending them.</text>
+<defs><pattern id="h" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#b5bcc6" stroke-width="2"/></pattern>
+<pattern id="h2" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#8d97a6" stroke-width="2"/></pattern></defs>
+<path d="M 37.5 225.0 H 312.5 V 450.0 H 37.5 Z" fill="url(#h)" stroke="#2c3e50" stroke-width="2"/>
+<rect x="150.0" y="224.0" width="160.0" height="38.5" fill="#ffffff" stroke="#2c3e50" stroke-width="2"/>
+<path d="M 147.5 457.5 H 323.75 V 245 H 572.5 V 645 H 147.5 Z" fill="url(#h2)" stroke="#2c3e50" stroke-width="2"/>
+<rect x="175.625" y="262.5" width="108.74999999999999" height="187.5" fill="#fff"/>
+<rect x="179.375" y="457.5" width="101.25" height="125" fill="#fff"/>
+<rect x="187.5" y="582.5" width="145.0" height="50.0" fill="#fff"/>
+<rect x="332.5" y="582.5" width="240.0" height="20.0" fill="#fff"/>
+<rect x="180.0" y="250.0" width="11.25" height="332.5" fill="#d4a640" stroke="#8a6d1f"/>
+<rect x="268.75" y="250.0" width="11.25" height="332.5" fill="#d4a640" stroke="#8a6d1f"/>
+<path d="M 180.0 250.0 L 160.0 237.5 M 280.0 250.0 L 300.0 237.5" stroke="#8a6d1f" stroke-width="7" stroke-linecap="round"/>
+<path d="M 37.5 205.0 H 218.75 V 570.0 H 574.5" fill="none" stroke="#e74c3c" stroke-width="5" stroke-linejoin="round"/>
+<path d="M 37.5 211.0 H 230.0 V 577.0 H 574.5" fill="none" stroke="#2c3e50" stroke-width="5" stroke-linejoin="round"/>
+<path d="M 37.5 217.0 H 241.25 V 584.0 H 574.5" fill="none" stroke="#27ae60" stroke-width="5" stroke-linejoin="round"/>
+<polyline points="294.0,238.75 680,150 700,150" fill="none" stroke="#ff4d3d" stroke-width="2"/><circle cx="294.0" cy="238.75" r="5" fill="#ff4d3d"/>
+<text x="708" y="155" font-size="16" font-weight="700" fill="#14181d">Flared tube top: holds the temple on</text>
+<polyline points="300.5,345 680,260 700,260" fill="none" stroke="#ff4d3d" stroke-width="2"/><circle cx="300.5" cy="345" r="5" fill="#ff4d3d"/>
+<text x="708" y="265" font-size="16" font-weight="700" fill="#14181d">Frame knuckle: bore 4.35 mm, tube turns</text>
+<polyline points="274.0,395.0 680,380 700,380" fill="none" stroke="#ff4d3d" stroke-width="2"/><circle cx="274.0" cy="395.0" r="5" fill="#ff4d3d"/>
+<text x="708" y="385" font-size="16" font-weight="700" fill="#14181d">Brass tube 4 mm OD / 3.1 mm ID, 13.5 mm long</text>
+<polyline points="372.5,520 680,500 700,500" fill="none" stroke="#ff4d3d" stroke-width="2"/><circle cx="372.5" cy="520" r="5" fill="#ff4d3d"/>
+<text x="708" y="505" font-size="16" font-weight="700" fill="#14181d">Temple knuckle: bore 4.05 mm, tube glued (CA)</text>
+<polyline points="492.5,577.5 680,600 700,600" fill="none" stroke="#ff4d3d" stroke-width="2"/><circle cx="492.5" cy="577.5" r="5" fill="#ff4d3d"/>
+<text x="708" y="605" font-size="16" font-weight="700" fill="#14181d">Wire chamber, then groove on the temple's head side</text>
+<text x="42.5" y="193.0" font-size="14" fill="#5d6773">from the frame groove</text>
+<text x="42.5" y="474.0" font-size="15" font-weight="700" fill="#2c3e50">FRAME</text>
+<text x="502.5" y="667" font-size="15" font-weight="700" fill="#2c3e50">TEMPLE</text>
+<line x1="230" y1="180.0" x2="230" y2="670" stroke="#9aa3ad" stroke-dasharray="6 6"/><text x="200" y="688" font-size="13" fill="#5d6773">fold axis</text>
+</svg>
