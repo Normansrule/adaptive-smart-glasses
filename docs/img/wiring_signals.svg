@@ -1,205 +1,197 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 936 1768" width="936" height="1768" font-family="Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 936 1694" width="936" height="1694" font-family="Helvetica,Arial,sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<text x="20" y="34" font-size="24" font-weight="700" fill="#14181d">Signals: I2C sensors, I2S audio</text>
-<text x="20" y="56" font-size="13" fill="#5d6773">Modules in physical order: left temple → frame → right temple. Each coloured rail is one net.</text>
+<text x="20" y="34" font-size="24" font-weight="700" fill="#14181d">Signals: displays, camera, sensors</text>
+<text x="20" y="56" font-size="13" fill="#5d6773">Modules in physical order: earpieces → brick cable → visor. Each coloured rail is one net.</text>
 <text x="20" y="74" font-size="13" fill="#5d6773">A dot is a connection. A line that crosses a rail without a dot is not connected.</text>
-<line x1="400" y1="240" x2="400" y2="696" stroke="#f39c12" stroke-width="4"/>
+<line x1="400" y1="412" x2="400" y2="1288" stroke="#f39c12" stroke-width="4"/>
 <text transform="translate(404,178) rotate(-60)" font-size="13" font-weight="700" fill="#f39c12">3V3</text>
-<line x1="434" y1="262" x2="434" y2="1364" stroke="#2c3e50" stroke-width="4"/>
+<line x1="434" y1="240" x2="434" y2="1626" stroke="#2c3e50" stroke-width="4"/>
 <text transform="translate(438,178) rotate(-60)" font-size="13" font-weight="700" fill="#2c3e50">GND</text>
-<line x1="468" y1="284" x2="468" y2="740" stroke="#2980b9" stroke-width="4"/>
-<text transform="translate(472,178) rotate(-60)" font-size="13" font-weight="700" fill="#2980b9">SDA</text>
-<line x1="502" y1="306" x2="502" y2="762" stroke="#f1c40f" stroke-width="4"/>
-<text transform="translate(506,178) rotate(-60)" font-size="13" font-weight="700" fill="#f1c40f">SCL</text>
-<line x1="536" y1="784" x2="536" y2="1386" stroke="#6c5ce7" stroke-width="4"/>
-<text transform="translate(540,178) rotate(-60)" font-size="13" font-weight="700" fill="#6c5ce7">I2S_BCLK</text>
-<line x1="570" y1="806" x2="570" y2="1408" stroke="#00b894" stroke-width="4"/>
-<text transform="translate(574,178) rotate(-60)" font-size="13" font-weight="700" fill="#00b894">I2S_WS</text>
-<line x1="604" y1="828" x2="604" y2="1430" stroke="#0984e3" stroke-width="4"/>
-<text transform="translate(608,178) rotate(-60)" font-size="13" font-weight="700" fill="#0984e3">I2S_TX</text>
-<line x1="638" y1="850" x2="638" y2="1080" stroke="#00cec9" stroke-width="4"/>
-<text transform="translate(642,178) rotate(-60)" font-size="13" font-weight="700" fill="#00cec9">I2S_RX</text>
-<line x1="672" y1="872" x2="672" y2="1244" stroke="#d35400" stroke-width="4"/>
-<text transform="translate(676,178) rotate(-60)" font-size="13" font-weight="700" fill="#d35400">SD_BONE</text>
-<line x1="706" y1="894" x2="706" y2="1452" stroke="#e17055" stroke-width="4"/>
-<text transform="translate(710,178) rotate(-60)" font-size="13" font-weight="700" fill="#e17055">SD_OUT</text>
-<line x1="740" y1="1266" x2="740" y2="1700" stroke="#636e72" stroke-width="4"/>
-<text transform="translate(744,178) rotate(-60)" font-size="13" font-weight="700" fill="#636e72">BONE+</text>
-<line x1="774" y1="1288" x2="774" y2="1722" stroke="#2d3436" stroke-width="4"/>
-<text transform="translate(778,178) rotate(-60)" font-size="13" font-weight="700" fill="#2d3436">BONE-</text>
-<line x1="808" y1="1474" x2="808" y2="1572" stroke="#b2bec3" stroke-width="4"/>
-<text transform="translate(812,178) rotate(-60)" font-size="13" font-weight="700" fill="#b2bec3">SPK+</text>
-<line x1="842" y1="1496" x2="842" y2="1594" stroke="#7f8c8d" stroke-width="4"/>
-<text transform="translate(846,178) rotate(-60)" font-size="13" font-weight="700" fill="#7f8c8d">SPK-</text>
-<line x1="876" y1="916" x2="876" y2="916" stroke="#e67e22" stroke-width="4"/>
-<text transform="translate(880,178) rotate(-60)" font-size="13" font-weight="700" fill="#e67e22">MEDIA_EN</text>
+<line x1="468" y1="456" x2="468" y2="982" stroke="#00b894" stroke-width="4"/>
+<text transform="translate(472,178) rotate(-60)" font-size="13" font-weight="700" fill="#00b894">SPI_SCK</text>
+<line x1="502" y1="478" x2="502" y2="1004" stroke="#00cec9" stroke-width="4"/>
+<text transform="translate(506,178) rotate(-60)" font-size="13" font-weight="700" fill="#00cec9">SPI_MOSI</text>
+<line x1="536" y1="500" x2="536" y2="1026" stroke="#55efc4" stroke-width="4"/>
+<text transform="translate(540,178) rotate(-60)" font-size="13" font-weight="700" fill="#55efc4">LCD_DC</text>
+<line x1="570" y1="522" x2="570" y2="840" stroke="#a29bfe" stroke-width="4"/>
+<text transform="translate(574,178) rotate(-60)" font-size="13" font-weight="700" fill="#a29bfe">CS_L</text>
+<line x1="604" y1="544" x2="604" y2="1048" stroke="#b388ff" stroke-width="4"/>
+<text transform="translate(608,178) rotate(-60)" font-size="13" font-weight="700" fill="#b388ff">CS_R</text>
+<line x1="638" y1="566" x2="638" y2="1070" stroke="#fdcb6e" stroke-width="4"/>
+<text transform="translate(642,178) rotate(-60)" font-size="13" font-weight="700" fill="#fdcb6e">LCD_BL</text>
+<line x1="672" y1="588" x2="672" y2="1190" stroke="#2980b9" stroke-width="4"/>
+<text transform="translate(676,178) rotate(-60)" font-size="13" font-weight="700" fill="#2980b9">SDA</text>
+<line x1="706" y1="610" x2="706" y2="1212" stroke="#f1c40f" stroke-width="4"/>
+<text transform="translate(710,178) rotate(-60)" font-size="13" font-weight="700" fill="#f1c40f">SCL</text>
+<line x1="740" y1="632" x2="740" y2="1332" stroke="#e17055" stroke-width="4"/>
+<text transform="translate(744,178) rotate(-60)" font-size="13" font-weight="700" fill="#e17055">HALL</text>
+<line x1="774" y1="654" x2="774" y2="1430" stroke="#d35400" stroke-width="4"/>
+<text transform="translate(778,178) rotate(-60)" font-size="13" font-weight="700" fill="#d35400">BUTTON</text>
+<line x1="808" y1="262" x2="808" y2="1528" stroke="#0984e3" stroke-width="4"/>
+<text transform="translate(812,178) rotate(-60)" font-size="13" font-weight="700" fill="#0984e3">USB_D+</text>
+<line x1="842" y1="284" x2="842" y2="1550" stroke="#74b9ff" stroke-width="4"/>
+<text transform="translate(846,178) rotate(-60)" font-size="13" font-weight="700" fill="#74b9ff">USB_D-</text>
+<line x1="876" y1="306" x2="876" y2="1648" stroke="#6c5ce7" stroke-width="4"/>
+<text transform="translate(880,178) rotate(-60)" font-size="13" font-weight="700" fill="#6c5ce7">HDMI</text>
 <rect x="20" y="190" width="330" height="128" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="210" font-size="15" font-weight="700" fill="#14181d">U4 · BME280</text>
-<text x="32" y="224" font-size="11" fill="#5d6773">Left brow pocket</text>
-<text x="340" y="244" font-size="12.5" text-anchor="end" fill="#14181d">VIN</text>
-<line x1="350" y1="240" x2="400" y2="240" stroke="#f39c12" stroke-width="2.4"/>
-<circle cx="350" cy="240" r="3.5" fill="#2c3e50"/><circle cx="400" cy="240" r="5" fill="#f39c12"/>
-<text x="340" y="266" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="262" x2="434" y2="262" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="262" r="3.5" fill="#2c3e50"/><circle cx="434" cy="262" r="5" fill="#2c3e50"/>
-<text x="340" y="288" font-size="12.5" text-anchor="end" fill="#14181d">SDA</text>
-<line x1="350" y1="284" x2="468" y2="284" stroke="#2980b9" stroke-width="2.4"/>
-<circle cx="350" cy="284" r="3.5" fill="#2c3e50"/><circle cx="468" cy="284" r="5" fill="#2980b9"/>
-<text x="340" y="310" font-size="12.5" text-anchor="end" fill="#14181d">SCL</text>
-<line x1="350" y1="306" x2="502" y2="306" stroke="#f1c40f" stroke-width="2.4"/>
-<circle cx="350" cy="306" r="3.5" fill="#2c3e50"/><circle cx="502" cy="306" r="5" fill="#f1c40f"/>
-<rect x="20" y="332" width="330" height="128" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="352" font-size="15" font-weight="700" fill="#14181d">U2 · ToF 8x8</text>
-<text x="32" y="366" font-size="11" fill="#5d6773">Bridge pocket</text>
-<text x="340" y="386" font-size="12.5" text-anchor="end" fill="#14181d">3V3 (Qwiic)</text>
-<line x1="350" y1="382" x2="400" y2="382" stroke="#f39c12" stroke-width="2.4"/>
-<circle cx="350" cy="382" r="3.5" fill="#2c3e50"/><circle cx="400" cy="382" r="5" fill="#f39c12"/>
-<text x="340" y="408" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="404" x2="434" y2="404" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="404" r="3.5" fill="#2c3e50"/><circle cx="434" cy="404" r="5" fill="#2c3e50"/>
-<text x="340" y="430" font-size="12.5" text-anchor="end" fill="#14181d">SDA (Qwiic)</text>
-<line x1="350" y1="426" x2="468" y2="426" stroke="#2980b9" stroke-width="2.4"/>
-<circle cx="350" cy="426" r="3.5" fill="#2c3e50"/><circle cx="468" cy="426" r="5" fill="#2980b9"/>
-<text x="340" y="452" font-size="12.5" text-anchor="end" fill="#14181d">SCL (Qwiic)</text>
-<line x1="350" y1="448" x2="502" y2="448" stroke="#f1c40f" stroke-width="2.4"/>
-<circle cx="350" cy="448" r="3.5" fill="#2c3e50"/><circle cx="502" cy="448" r="5" fill="#f1c40f"/>
-<line x1="10" y1="482" x2="926" y2="482" stroke="#9aa3ad" stroke-width="2" stroke-dasharray="8 6"/>
-<text x="20" y="476" font-size="12" font-weight="700" fill="#5d6773">RIGHT HINGE  (wires pass through the brass tube)</text>
-<rect x="20" y="504" width="330" height="128" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="524" font-size="15" font-weight="700" fill="#14181d">U3 · IMU</text>
-<text x="32" y="538" font-size="11" fill="#5d6773">Right pod, outer layer</text>
-<text x="340" y="558" font-size="12.5" text-anchor="end" fill="#14181d">3V3 (Qwiic)</text>
-<line x1="350" y1="554" x2="400" y2="554" stroke="#f39c12" stroke-width="2.4"/>
-<circle cx="350" cy="554" r="3.5" fill="#2c3e50"/><circle cx="400" cy="554" r="5" fill="#f39c12"/>
-<text x="340" y="580" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="576" x2="434" y2="576" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="576" r="3.5" fill="#2c3e50"/><circle cx="434" cy="576" r="5" fill="#2c3e50"/>
-<text x="340" y="602" font-size="12.5" text-anchor="end" fill="#14181d">SDA (Qwiic)</text>
-<line x1="350" y1="598" x2="468" y2="598" stroke="#2980b9" stroke-width="2.4"/>
-<circle cx="350" cy="598" r="3.5" fill="#2c3e50"/><circle cx="468" cy="598" r="5" fill="#2980b9"/>
-<text x="340" y="624" font-size="12.5" text-anchor="end" fill="#14181d">SCL (Qwiic)</text>
-<line x1="350" y1="620" x2="502" y2="620" stroke="#f1c40f" stroke-width="2.4"/>
-<circle cx="350" cy="620" r="3.5" fill="#2c3e50"/><circle cx="502" cy="620" r="5" fill="#f1c40f"/>
-<rect x="20" y="646" width="330" height="282" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="666" font-size="15" font-weight="700" fill="#14181d">U1 · XIAO ESP32-S3</text>
-<text x="32" y="680" font-size="11" fill="#5d6773">Right pod, outer layer, rear</text>
-<text x="340" y="700" font-size="12.5" text-anchor="end" fill="#14181d">3V3</text>
-<line x1="350" y1="696" x2="400" y2="696" stroke="#f39c12" stroke-width="2.4"/>
-<circle cx="350" cy="696" r="3.5" fill="#2c3e50"/><circle cx="400" cy="696" r="5" fill="#f39c12"/>
-<text x="340" y="722" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="718" x2="434" y2="718" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="718" r="3.5" fill="#2c3e50"/><circle cx="434" cy="718" r="5" fill="#2c3e50"/>
-<text x="340" y="744" font-size="12.5" text-anchor="end" fill="#14181d">D4</text>
-<line x1="350" y1="740" x2="468" y2="740" stroke="#2980b9" stroke-width="2.4"/>
-<circle cx="350" cy="740" r="3.5" fill="#2c3e50"/><circle cx="468" cy="740" r="5" fill="#2980b9"/>
-<text x="340" y="766" font-size="12.5" text-anchor="end" fill="#14181d">D5</text>
-<line x1="350" y1="762" x2="502" y2="762" stroke="#f1c40f" stroke-width="2.4"/>
-<circle cx="350" cy="762" r="3.5" fill="#2c3e50"/><circle cx="502" cy="762" r="5" fill="#f1c40f"/>
-<text x="340" y="788" font-size="12.5" text-anchor="end" fill="#14181d">D8</text>
-<line x1="350" y1="784" x2="536" y2="784" stroke="#6c5ce7" stroke-width="2.4"/>
-<circle cx="350" cy="784" r="3.5" fill="#2c3e50"/><circle cx="536" cy="784" r="5" fill="#6c5ce7"/>
-<text x="340" y="810" font-size="12.5" text-anchor="end" fill="#14181d">D9</text>
-<line x1="350" y1="806" x2="570" y2="806" stroke="#00b894" stroke-width="2.4"/>
-<circle cx="350" cy="806" r="3.5" fill="#2c3e50"/><circle cx="570" cy="806" r="5" fill="#00b894"/>
-<text x="340" y="832" font-size="12.5" text-anchor="end" fill="#14181d">D10</text>
-<line x1="350" y1="828" x2="604" y2="828" stroke="#0984e3" stroke-width="2.4"/>
-<circle cx="350" cy="828" r="3.5" fill="#2c3e50"/><circle cx="604" cy="828" r="5" fill="#0984e3"/>
-<text x="340" y="854" font-size="12.5" text-anchor="end" fill="#14181d">D7</text>
-<line x1="350" y1="850" x2="638" y2="850" stroke="#00cec9" stroke-width="2.4"/>
-<circle cx="350" cy="850" r="3.5" fill="#2c3e50"/><circle cx="638" cy="850" r="5" fill="#00cec9"/>
-<text x="340" y="876" font-size="12.5" text-anchor="end" fill="#14181d">D2</text>
-<line x1="350" y1="872" x2="672" y2="872" stroke="#d35400" stroke-width="2.4"/>
-<circle cx="350" cy="872" r="3.5" fill="#2c3e50"/><circle cx="672" cy="872" r="5" fill="#d35400"/>
-<text x="340" y="898" font-size="12.5" text-anchor="end" fill="#14181d">D3</text>
-<line x1="350" y1="894" x2="706" y2="894" stroke="#e17055" stroke-width="2.4"/>
-<circle cx="350" cy="894" r="3.5" fill="#2c3e50"/><circle cx="706" cy="894" r="5" fill="#e17055"/>
-<text x="340" y="920" font-size="12.5" text-anchor="end" fill="#14181d">D6</text>
-<line x1="350" y1="916" x2="876" y2="916" stroke="#e67e22" stroke-width="2.4"/>
-<circle cx="350" cy="916" r="3.5" fill="#2c3e50"/><circle cx="876" cy="916" r="5" fill="#e67e22"/>
-<rect x="20" y="942" width="330" height="150" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="962" font-size="15" font-weight="700" fill="#14181d">U5 · Mic</text>
-<text x="32" y="976" font-size="11" fill="#5d6773">Right pod, outer layer, front</text>
-<text x="340" y="996" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="992" x2="434" y2="992" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="992" r="3.5" fill="#2c3e50"/><circle cx="434" cy="992" r="5" fill="#2c3e50"/>
-<text x="340" y="1018" font-size="12.5" text-anchor="end" fill="#14181d">SEL</text>
-<line x1="350" y1="1014" x2="434" y2="1014" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="1014" r="3.5" fill="#2c3e50"/><circle cx="434" cy="1014" r="5" fill="#2c3e50"/>
-<text x="340" y="1040" font-size="12.5" text-anchor="end" fill="#14181d">BCLK</text>
-<line x1="350" y1="1036" x2="536" y2="1036" stroke="#6c5ce7" stroke-width="2.4"/>
-<circle cx="350" cy="1036" r="3.5" fill="#2c3e50"/><circle cx="536" cy="1036" r="5" fill="#6c5ce7"/>
-<text x="340" y="1062" font-size="12.5" text-anchor="end" fill="#14181d">LRCL</text>
-<line x1="350" y1="1058" x2="570" y2="1058" stroke="#00b894" stroke-width="2.4"/>
-<circle cx="350" cy="1058" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1058" r="5" fill="#00b894"/>
-<text x="340" y="1084" font-size="12.5" text-anchor="end" fill="#14181d">DOUT</text>
-<line x1="350" y1="1080" x2="638" y2="1080" stroke="#00cec9" stroke-width="2.4"/>
-<circle cx="350" cy="1080" r="3.5" fill="#2c3e50"/><circle cx="638" cy="1080" r="5" fill="#00cec9"/>
-<rect x="20" y="1106" width="330" height="194" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1126" font-size="15" font-weight="700" fill="#14181d">U6 · Amp BONE</text>
-<text x="32" y="1140" font-size="11" fill="#5d6773">Right pod, inner layer</text>
-<text x="340" y="1160" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="1156" x2="434" y2="1156" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="1156" r="3.5" fill="#2c3e50"/><circle cx="434" cy="1156" r="5" fill="#2c3e50"/>
-<text x="340" y="1182" font-size="12.5" text-anchor="end" fill="#14181d">BCLK</text>
-<line x1="350" y1="1178" x2="536" y2="1178" stroke="#6c5ce7" stroke-width="2.4"/>
-<circle cx="350" cy="1178" r="3.5" fill="#2c3e50"/><circle cx="536" cy="1178" r="5" fill="#6c5ce7"/>
-<text x="340" y="1204" font-size="12.5" text-anchor="end" fill="#14181d">LRC</text>
-<line x1="350" y1="1200" x2="570" y2="1200" stroke="#00b894" stroke-width="2.4"/>
-<circle cx="350" cy="1200" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1200" r="5" fill="#00b894"/>
-<text x="340" y="1226" font-size="12.5" text-anchor="end" fill="#14181d">DIN</text>
-<line x1="350" y1="1222" x2="604" y2="1222" stroke="#0984e3" stroke-width="2.4"/>
-<circle cx="350" cy="1222" r="3.5" fill="#2c3e50"/><circle cx="604" cy="1222" r="5" fill="#0984e3"/>
-<text x="340" y="1248" font-size="12.5" text-anchor="end" fill="#14181d">SD</text>
-<line x1="350" y1="1244" x2="672" y2="1244" stroke="#d35400" stroke-width="2.4"/>
-<circle cx="350" cy="1244" r="3.5" fill="#2c3e50"/><circle cx="672" cy="1244" r="5" fill="#d35400"/>
-<text x="340" y="1270" font-size="12.5" text-anchor="end" fill="#14181d">OUT +</text>
-<line x1="350" y1="1266" x2="740" y2="1266" stroke="#636e72" stroke-width="2.4"/>
-<circle cx="350" cy="1266" r="3.5" fill="#2c3e50"/><circle cx="740" cy="1266" r="5" fill="#636e72"/>
-<text x="340" y="1292" font-size="12.5" text-anchor="end" fill="#14181d">OUT -</text>
-<line x1="350" y1="1288" x2="774" y2="1288" stroke="#2d3436" stroke-width="2.4"/>
-<circle cx="350" cy="1288" r="3.5" fill="#2c3e50"/><circle cx="774" cy="1288" r="5" fill="#2d3436"/>
-<rect x="20" y="1314" width="330" height="194" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1334" font-size="15" font-weight="700" fill="#14181d">U7 · Amp OUTWARD</text>
-<text x="32" y="1348" font-size="11" fill="#5d6773">Right pod, inner layer</text>
-<text x="340" y="1368" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="1364" x2="434" y2="1364" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="1364" r="3.5" fill="#2c3e50"/><circle cx="434" cy="1364" r="5" fill="#2c3e50"/>
-<text x="340" y="1390" font-size="12.5" text-anchor="end" fill="#14181d">BCLK</text>
-<line x1="350" y1="1386" x2="536" y2="1386" stroke="#6c5ce7" stroke-width="2.4"/>
-<circle cx="350" cy="1386" r="3.5" fill="#2c3e50"/><circle cx="536" cy="1386" r="5" fill="#6c5ce7"/>
-<text x="340" y="1412" font-size="12.5" text-anchor="end" fill="#14181d">LRC</text>
-<line x1="350" y1="1408" x2="570" y2="1408" stroke="#00b894" stroke-width="2.4"/>
-<circle cx="350" cy="1408" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1408" r="5" fill="#00b894"/>
-<text x="340" y="1434" font-size="12.5" text-anchor="end" fill="#14181d">DIN</text>
-<line x1="350" y1="1430" x2="604" y2="1430" stroke="#0984e3" stroke-width="2.4"/>
-<circle cx="350" cy="1430" r="3.5" fill="#2c3e50"/><circle cx="604" cy="1430" r="5" fill="#0984e3"/>
-<text x="340" y="1456" font-size="12.5" text-anchor="end" fill="#14181d">SD</text>
-<line x1="350" y1="1452" x2="706" y2="1452" stroke="#e17055" stroke-width="2.4"/>
-<circle cx="350" cy="1452" r="3.5" fill="#2c3e50"/><circle cx="706" cy="1452" r="5" fill="#e17055"/>
-<text x="340" y="1478" font-size="12.5" text-anchor="end" fill="#14181d">OUT +</text>
-<line x1="350" y1="1474" x2="808" y2="1474" stroke="#b2bec3" stroke-width="2.4"/>
-<circle cx="350" cy="1474" r="3.5" fill="#2c3e50"/><circle cx="808" cy="1474" r="5" fill="#b2bec3"/>
-<text x="340" y="1500" font-size="12.5" text-anchor="end" fill="#14181d">OUT -</text>
-<line x1="350" y1="1496" x2="842" y2="1496" stroke="#7f8c8d" stroke-width="2.4"/>
-<circle cx="350" cy="1496" r="3.5" fill="#2c3e50"/><circle cx="842" cy="1496" r="5" fill="#7f8c8d"/>
-<rect x="20" y="1522" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1542" font-size="15" font-weight="700" fill="#14181d">LS1 · Speaker</text>
-<text x="32" y="1556" font-size="11" fill="#5d6773">Right pod, inner wall grille</text>
-<text x="340" y="1576" font-size="12.5" text-anchor="end" fill="#14181d">+</text>
-<line x1="350" y1="1572" x2="808" y2="1572" stroke="#b2bec3" stroke-width="2.4"/>
-<circle cx="350" cy="1572" r="3.5" fill="#2c3e50"/><circle cx="808" cy="1572" r="5" fill="#b2bec3"/>
-<text x="340" y="1598" font-size="12.5" text-anchor="end" fill="#14181d">-</text>
-<line x1="350" y1="1594" x2="842" y2="1594" stroke="#7f8c8d" stroke-width="2.4"/>
-<circle cx="350" cy="1594" r="3.5" fill="#2c3e50"/><circle cx="842" cy="1594" r="5" fill="#7f8c8d"/>
-<line x1="10" y1="1628" x2="926" y2="1628" stroke="#9aa3ad" stroke-width="2" stroke-dasharray="8 6"/>
-<text x="20" y="1622" font-size="12" font-weight="700" fill="#5d6773">EAR GRIP</text>
-<rect x="20" y="1650" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1670" font-size="15" font-weight="700" fill="#14181d">LS2 · Bone transducer</text>
-<text x="32" y="1684" font-size="11" fill="#5d6773">Right ear grip cradle</text>
-<text x="340" y="1704" font-size="12.5" text-anchor="end" fill="#14181d">+</text>
-<line x1="350" y1="1700" x2="740" y2="1700" stroke="#636e72" stroke-width="2.4"/>
-<circle cx="350" cy="1700" r="3.5" fill="#2c3e50"/><circle cx="740" cy="1700" r="5" fill="#636e72"/>
-<text x="340" y="1726" font-size="12.5" text-anchor="end" fill="#14181d">-</text>
-<line x1="350" y1="1722" x2="774" y2="1722" stroke="#2d3436" stroke-width="2.4"/>
-<circle cx="350" cy="1722" r="3.5" fill="#2c3e50"/><circle cx="774" cy="1722" r="5" fill="#2d3436"/>
+<text x="32" y="210" font-size="15" font-weight="700" fill="#14181d">J1 · Brick cable</text>
+<text x="32" y="224" font-size="11" fill="#5d6773">Enters visor crest, left side</text>
+<text x="340" y="244" font-size="12.5" text-anchor="end" fill="#14181d">USB GND / HDMI shell</text>
+<line x1="350" y1="240" x2="434" y2="240" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="240" r="3.5" fill="#2c3e50"/><circle cx="434" cy="240" r="5" fill="#2c3e50"/>
+<text x="340" y="266" font-size="12.5" text-anchor="end" fill="#14181d">USB D+</text>
+<line x1="350" y1="262" x2="808" y2="262" stroke="#0984e3" stroke-width="2.4"/>
+<circle cx="350" cy="262" r="3.5" fill="#2c3e50"/><circle cx="808" cy="262" r="5" fill="#0984e3"/>
+<text x="340" y="288" font-size="12.5" text-anchor="end" fill="#14181d">USB D-</text>
+<line x1="350" y1="284" x2="842" y2="284" stroke="#74b9ff" stroke-width="2.4"/>
+<circle cx="350" cy="284" r="3.5" fill="#2c3e50"/><circle cx="842" cy="284" r="5" fill="#74b9ff"/>
+<text x="340" y="310" font-size="12.5" text-anchor="end" fill="#14181d">HDMI</text>
+<line x1="350" y1="306" x2="876" y2="306" stroke="#6c5ce7" stroke-width="2.4"/>
+<circle cx="350" cy="306" r="3.5" fill="#2c3e50"/><circle cx="876" cy="306" r="5" fill="#6c5ce7"/>
+<line x1="10" y1="340" x2="926" y2="340" stroke="#9aa3ad" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="20" y="334" font-size="12" font-weight="700" fill="#5d6773">INSIDE THE VISOR</text>
+<rect x="20" y="362" width="330" height="304" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="382" font-size="15" font-weight="700" fill="#14181d">U1 · XIAO ESP32-S3</text>
+<text x="32" y="396" font-size="11" fill="#5d6773">Visor bridge, behind camera</text>
+<text x="340" y="416" font-size="12.5" text-anchor="end" fill="#14181d">3V3</text>
+<line x1="350" y1="412" x2="400" y2="412" stroke="#f39c12" stroke-width="2.4"/>
+<circle cx="350" cy="412" r="3.5" fill="#2c3e50"/><circle cx="400" cy="412" r="5" fill="#f39c12"/>
+<text x="340" y="438" font-size="12.5" text-anchor="end" fill="#14181d">GND + BAT- pad</text>
+<line x1="350" y1="434" x2="434" y2="434" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="434" r="3.5" fill="#2c3e50"/><circle cx="434" cy="434" r="5" fill="#2c3e50"/>
+<text x="340" y="460" font-size="12.5" text-anchor="end" fill="#14181d">D8</text>
+<line x1="350" y1="456" x2="468" y2="456" stroke="#00b894" stroke-width="2.4"/>
+<circle cx="350" cy="456" r="3.5" fill="#2c3e50"/><circle cx="468" cy="456" r="5" fill="#00b894"/>
+<text x="340" y="482" font-size="12.5" text-anchor="end" fill="#14181d">D10</text>
+<line x1="350" y1="478" x2="502" y2="478" stroke="#00cec9" stroke-width="2.4"/>
+<circle cx="350" cy="478" r="3.5" fill="#2c3e50"/><circle cx="502" cy="478" r="5" fill="#00cec9"/>
+<text x="340" y="504" font-size="12.5" text-anchor="end" fill="#14181d">D2</text>
+<line x1="350" y1="500" x2="536" y2="500" stroke="#55efc4" stroke-width="2.4"/>
+<circle cx="350" cy="500" r="3.5" fill="#2c3e50"/><circle cx="536" cy="500" r="5" fill="#55efc4"/>
+<text x="340" y="526" font-size="12.5" text-anchor="end" fill="#14181d">D0</text>
+<line x1="350" y1="522" x2="570" y2="522" stroke="#a29bfe" stroke-width="2.4"/>
+<circle cx="350" cy="522" r="3.5" fill="#2c3e50"/><circle cx="570" cy="522" r="5" fill="#a29bfe"/>
+<text x="340" y="548" font-size="12.5" text-anchor="end" fill="#14181d">D1</text>
+<line x1="350" y1="544" x2="604" y2="544" stroke="#b388ff" stroke-width="2.4"/>
+<circle cx="350" cy="544" r="3.5" fill="#2c3e50"/><circle cx="604" cy="544" r="5" fill="#b388ff"/>
+<text x="340" y="570" font-size="12.5" text-anchor="end" fill="#14181d">D6</text>
+<line x1="350" y1="566" x2="638" y2="566" stroke="#fdcb6e" stroke-width="2.4"/>
+<circle cx="350" cy="566" r="3.5" fill="#2c3e50"/><circle cx="638" cy="566" r="5" fill="#fdcb6e"/>
+<text x="340" y="592" font-size="12.5" text-anchor="end" fill="#14181d">D4</text>
+<line x1="350" y1="588" x2="672" y2="588" stroke="#2980b9" stroke-width="2.4"/>
+<circle cx="350" cy="588" r="3.5" fill="#2c3e50"/><circle cx="672" cy="588" r="5" fill="#2980b9"/>
+<text x="340" y="614" font-size="12.5" text-anchor="end" fill="#14181d">D5</text>
+<line x1="350" y1="610" x2="706" y2="610" stroke="#f1c40f" stroke-width="2.4"/>
+<circle cx="350" cy="610" r="3.5" fill="#2c3e50"/><circle cx="706" cy="610" r="5" fill="#f1c40f"/>
+<text x="340" y="636" font-size="12.5" text-anchor="end" fill="#14181d">D7</text>
+<line x1="350" y1="632" x2="740" y2="632" stroke="#e17055" stroke-width="2.4"/>
+<circle cx="350" cy="632" r="3.5" fill="#2c3e50"/><circle cx="740" cy="632" r="5" fill="#e17055"/>
+<text x="340" y="658" font-size="12.5" text-anchor="end" fill="#14181d">D9</text>
+<line x1="350" y1="654" x2="774" y2="654" stroke="#d35400" stroke-width="2.4"/>
+<circle cx="350" cy="654" r="3.5" fill="#2c3e50"/><circle cx="774" cy="654" r="5" fill="#d35400"/>
+<rect x="20" y="680" width="330" height="194" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="700" font-size="15" font-weight="700" fill="#14181d">U5 · LCD LEFT</text>
+<text x="32" y="714" font-size="11" fill="#5d6773">Left pod, front</text>
+<text x="340" y="734" font-size="12.5" text-anchor="end" fill="#14181d">VCC + RST</text>
+<line x1="350" y1="730" x2="400" y2="730" stroke="#f39c12" stroke-width="2.4"/>
+<circle cx="350" cy="730" r="3.5" fill="#2c3e50"/><circle cx="400" cy="730" r="5" fill="#f39c12"/>
+<text x="340" y="756" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
+<line x1="350" y1="752" x2="434" y2="752" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="752" r="3.5" fill="#2c3e50"/><circle cx="434" cy="752" r="5" fill="#2c3e50"/>
+<text x="340" y="778" font-size="12.5" text-anchor="end" fill="#14181d">CLK</text>
+<line x1="350" y1="774" x2="468" y2="774" stroke="#00b894" stroke-width="2.4"/>
+<circle cx="350" cy="774" r="3.5" fill="#2c3e50"/><circle cx="468" cy="774" r="5" fill="#00b894"/>
+<text x="340" y="800" font-size="12.5" text-anchor="end" fill="#14181d">DIN</text>
+<line x1="350" y1="796" x2="502" y2="796" stroke="#00cec9" stroke-width="2.4"/>
+<circle cx="350" cy="796" r="3.5" fill="#2c3e50"/><circle cx="502" cy="796" r="5" fill="#00cec9"/>
+<text x="340" y="822" font-size="12.5" text-anchor="end" fill="#14181d">DC</text>
+<line x1="350" y1="818" x2="536" y2="818" stroke="#55efc4" stroke-width="2.4"/>
+<circle cx="350" cy="818" r="3.5" fill="#2c3e50"/><circle cx="536" cy="818" r="5" fill="#55efc4"/>
+<text x="340" y="844" font-size="12.5" text-anchor="end" fill="#14181d">CS</text>
+<line x1="350" y1="840" x2="570" y2="840" stroke="#a29bfe" stroke-width="2.4"/>
+<circle cx="350" cy="840" r="3.5" fill="#2c3e50"/><circle cx="570" cy="840" r="5" fill="#a29bfe"/>
+<text x="340" y="866" font-size="12.5" text-anchor="end" fill="#14181d">BL</text>
+<line x1="350" y1="862" x2="638" y2="862" stroke="#fdcb6e" stroke-width="2.4"/>
+<circle cx="350" cy="862" r="3.5" fill="#2c3e50"/><circle cx="638" cy="862" r="5" fill="#fdcb6e"/>
+<rect x="20" y="888" width="330" height="194" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="908" font-size="15" font-weight="700" fill="#14181d">U6 · LCD RIGHT</text>
+<text x="32" y="922" font-size="11" fill="#5d6773">Right pod, front</text>
+<text x="340" y="942" font-size="12.5" text-anchor="end" fill="#14181d">VCC + RST</text>
+<line x1="350" y1="938" x2="400" y2="938" stroke="#f39c12" stroke-width="2.4"/>
+<circle cx="350" cy="938" r="3.5" fill="#2c3e50"/><circle cx="400" cy="938" r="5" fill="#f39c12"/>
+<text x="340" y="964" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
+<line x1="350" y1="960" x2="434" y2="960" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="960" r="3.5" fill="#2c3e50"/><circle cx="434" cy="960" r="5" fill="#2c3e50"/>
+<text x="340" y="986" font-size="12.5" text-anchor="end" fill="#14181d">CLK</text>
+<line x1="350" y1="982" x2="468" y2="982" stroke="#00b894" stroke-width="2.4"/>
+<circle cx="350" cy="982" r="3.5" fill="#2c3e50"/><circle cx="468" cy="982" r="5" fill="#00b894"/>
+<text x="340" y="1008" font-size="12.5" text-anchor="end" fill="#14181d">DIN</text>
+<line x1="350" y1="1004" x2="502" y2="1004" stroke="#00cec9" stroke-width="2.4"/>
+<circle cx="350" cy="1004" r="3.5" fill="#2c3e50"/><circle cx="502" cy="1004" r="5" fill="#00cec9"/>
+<text x="340" y="1030" font-size="12.5" text-anchor="end" fill="#14181d">DC</text>
+<line x1="350" y1="1026" x2="536" y2="1026" stroke="#55efc4" stroke-width="2.4"/>
+<circle cx="350" cy="1026" r="3.5" fill="#2c3e50"/><circle cx="536" cy="1026" r="5" fill="#55efc4"/>
+<text x="340" y="1052" font-size="12.5" text-anchor="end" fill="#14181d">CS</text>
+<line x1="350" y1="1048" x2="604" y2="1048" stroke="#b388ff" stroke-width="2.4"/>
+<circle cx="350" cy="1048" r="3.5" fill="#2c3e50"/><circle cx="604" cy="1048" r="5" fill="#b388ff"/>
+<text x="340" y="1074" font-size="12.5" text-anchor="end" fill="#14181d">BL</text>
+<line x1="350" y1="1070" x2="638" y2="1070" stroke="#fdcb6e" stroke-width="2.4"/>
+<circle cx="350" cy="1070" r="3.5" fill="#2c3e50"/><circle cx="638" cy="1070" r="5" fill="#fdcb6e"/>
+<rect x="20" y="1096" width="330" height="128" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1116" font-size="15" font-weight="700" fill="#14181d">U3 · IMU</text>
+<text x="32" y="1130" font-size="11" fill="#5d6773">Visor bridge</text>
+<text x="340" y="1150" font-size="12.5" text-anchor="end" fill="#14181d">VIN (Qwiic)</text>
+<line x1="350" y1="1146" x2="400" y2="1146" stroke="#f39c12" stroke-width="2.4"/>
+<circle cx="350" cy="1146" r="3.5" fill="#2c3e50"/><circle cx="400" cy="1146" r="5" fill="#f39c12"/>
+<text x="340" y="1172" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
+<line x1="350" y1="1168" x2="434" y2="1168" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="1168" r="3.5" fill="#2c3e50"/><circle cx="434" cy="1168" r="5" fill="#2c3e50"/>
+<text x="340" y="1194" font-size="12.5" text-anchor="end" fill="#14181d">SDA (Qwiic)</text>
+<line x1="350" y1="1190" x2="672" y2="1190" stroke="#2980b9" stroke-width="2.4"/>
+<circle cx="350" cy="1190" r="3.5" fill="#2c3e50"/><circle cx="672" cy="1190" r="5" fill="#2980b9"/>
+<text x="340" y="1216" font-size="12.5" text-anchor="end" fill="#14181d">SCL (Qwiic)</text>
+<line x1="350" y1="1212" x2="706" y2="1212" stroke="#f1c40f" stroke-width="2.4"/>
+<circle cx="350" cy="1212" r="3.5" fill="#2c3e50"/><circle cx="706" cy="1212" r="5" fill="#f1c40f"/>
+<rect x="20" y="1238" width="330" height="106" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1258" font-size="15" font-weight="700" fill="#14181d">U4 · Hall switch</text>
+<text x="32" y="1272" font-size="11" fill="#5d6773">Back of visor bridge, faces brow magnet</text>
+<text x="340" y="1292" font-size="12.5" text-anchor="end" fill="#14181d">VCC</text>
+<line x1="350" y1="1288" x2="400" y2="1288" stroke="#f39c12" stroke-width="2.4"/>
+<circle cx="350" cy="1288" r="3.5" fill="#2c3e50"/><circle cx="400" cy="1288" r="5" fill="#f39c12"/>
+<text x="340" y="1314" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
+<line x1="350" y1="1310" x2="434" y2="1310" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="1310" r="3.5" fill="#2c3e50"/><circle cx="434" cy="1310" r="5" fill="#2c3e50"/>
+<text x="340" y="1336" font-size="12.5" text-anchor="end" fill="#14181d">OUT</text>
+<line x1="350" y1="1332" x2="740" y2="1332" stroke="#e17055" stroke-width="2.4"/>
+<circle cx="350" cy="1332" r="3.5" fill="#2c3e50"/><circle cx="740" cy="1332" r="5" fill="#e17055"/>
+<rect x="20" y="1358" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1378" font-size="15" font-weight="700" fill="#14181d">SW3 · Action button</text>
+<text x="32" y="1392" font-size="11" fill="#5d6773">Visor crest top flexure</text>
+<text x="340" y="1412" font-size="12.5" text-anchor="end" fill="#14181d">pin 2</text>
+<line x1="350" y1="1408" x2="434" y2="1408" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="1408" r="3.5" fill="#2c3e50"/><circle cx="434" cy="1408" r="5" fill="#2c3e50"/>
+<text x="340" y="1434" font-size="12.5" text-anchor="end" fill="#14181d">pin 1</text>
+<line x1="350" y1="1430" x2="774" y2="1430" stroke="#d35400" stroke-width="2.4"/>
+<circle cx="350" cy="1430" r="3.5" fill="#2c3e50"/><circle cx="774" cy="1430" r="5" fill="#d35400"/>
+<rect x="20" y="1456" width="330" height="106" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1476" font-size="15" font-weight="700" fill="#14181d">U2 · Camera</text>
+<text x="32" y="1490" font-size="11" fill="#5d6773">Visor centre bridge, front</text>
+<text x="340" y="1510" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
+<line x1="350" y1="1506" x2="434" y2="1506" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="1506" r="3.5" fill="#2c3e50"/><circle cx="434" cy="1506" r="5" fill="#2c3e50"/>
+<text x="340" y="1532" font-size="12.5" text-anchor="end" fill="#14181d">D+</text>
+<line x1="350" y1="1528" x2="808" y2="1528" stroke="#0984e3" stroke-width="2.4"/>
+<circle cx="350" cy="1528" r="3.5" fill="#2c3e50"/><circle cx="808" cy="1528" r="5" fill="#0984e3"/>
+<text x="340" y="1554" font-size="12.5" text-anchor="end" fill="#14181d">D-</text>
+<line x1="350" y1="1550" x2="842" y2="1550" stroke="#74b9ff" stroke-width="2.4"/>
+<circle cx="350" cy="1550" r="3.5" fill="#2c3e50"/><circle cx="842" cy="1550" r="5" fill="#74b9ff"/>
+<rect x="20" y="1576" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1596" font-size="15" font-weight="700" fill="#14181d">U7 · Micro-OLED board</text>
+<text x="32" y="1610" font-size="11" fill="#5d6773">Visor crest bay</text>
+<text x="340" y="1630" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
+<line x1="350" y1="1626" x2="434" y2="1626" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="1626" r="3.5" fill="#2c3e50"/><circle cx="434" cy="1626" r="5" fill="#2c3e50"/>
+<text x="340" y="1652" font-size="12.5" text-anchor="end" fill="#14181d">HDMI in</text>
+<line x1="350" y1="1648" x2="876" y2="1648" stroke="#6c5ce7" stroke-width="2.4"/>
+<circle cx="350" cy="1648" r="3.5" fill="#2c3e50"/><circle cx="876" cy="1648" r="5" fill="#6c5ce7"/>
 </svg>

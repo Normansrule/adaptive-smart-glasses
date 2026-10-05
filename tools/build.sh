@@ -6,8 +6,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 SCAD=cad/adaptive_smart_glasses.scad
-PARTS=(frame temple_left temple_right lid_left lid_right ear_grip_left ear_grip_right \
-       optics_tower display_slider combiner_arm tolerance_coupon)
+PARTS=(frame temple_left temple_right ear_grip_left ear_grip_right visor_shell visor_back tolerance_coupon)
 [ $# -gt 0 ] && PARTS=("$@")
 JOBS=${JOBS:-$(nproc 2>/dev/null || echo 2)}
 command -v openscad >/dev/null || { echo "openscad not found: sudo apt install -y openscad"; exit 1; }

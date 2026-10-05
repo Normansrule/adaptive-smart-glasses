@@ -1,85 +1,75 @@
 net,ref,module,pin,part,location,wire,net_description
-BATT,BT1,Battery,JST-PH,"Protected 1S LiPo 8x20x46, JST-PH","Left pod, front bay",JST-PH plug,Battery into charger
-BATT,U8,Charger + 5V,BATT JST-PH,Adafruit 6106 bq25185 + TPS61023,"Left pod, rear bay",JST-PH plug,Battery into charger
-THERM,TH1,NTC 10k,lead A,10k NTC B3435 (103AT),Taped to BT1,NTC leads,Charger stops when the cell is too hot or cold
-THERM,U8,Charger + 5V,R16 pad (THERM side),Adafruit 6106 bq25185 + TPS61023,"Left pod, rear bay",NTC leads,Charger stops when the cell is too hot or cold
-5V_RAW,U8,Charger + 5V,5V +,Adafruit 6106 bq25185 + TPS61023,"Left pod, rear bay",28 AWG red,Boost output to main switch
-5V_RAW,SW1,Main switch,COM,E-Switch 500SSP1S1M6QEA (SPDT used as SPST),Left frame endpiece,28 AWG red,Boost output to main switch
-5V_SW,SW1,Main switch,throw A,E-Switch 500SSP1S1M6QEA (SPDT used as SPST),Left frame endpiece,28 AWG red,Switched system 5 V
-5V_SW,D2,1N5817,anode,1N5817 Schottky,Right pod,28 AWG red,Switched system 5 V
-5V_SW,U6,Amp BONE,Vin,Adafruit 3006 MAX98357A,"Right pod, inner layer",28 AWG red,Switched system 5 V
-5V_SW,U7,Amp OUTWARD,Vin,Adafruit 3006 MAX98357A,"Right pod, inner layer",28 AWG red,Switched system 5 V
-5V_XIAO,D2,1N5817,cathode (band),1N5817 Schottky,Right pod,local,XIAO supply after diode
-5V_XIAO,U1,XIAO ESP32-S3,5V,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",local,XIAO supply after diode
-GND,U8,Charger + 5V,5V -,Adafruit 6106 bq25185 + TPS61023,"Left pod, rear bay",28 AWG black,Common ground
-GND,TH1,NTC 10k,lead B -> R16 GND pad,10k NTC B3435 (103AT),Taped to BT1,28 AWG black,Common ground
-GND,U4,BME280,GND,"GY-BME280 3.3 V, 4-pin",Left brow pocket,28 AWG black,Common ground
-GND,U2,ToF 8x8,GND,SparkFun SEN-19013 VL53L5CX Mini,Bridge pocket,28 AWG black,Common ground
-GND,D1,Privacy LED,cathode (short leg),3 mm red LED,Right frame endpiece (front),28 AWG black,Common ground
-GND,U3,IMU,GND,Adafruit 4438 LSM6DSOX,"Right pod, outer layer",28 AWG black,Common ground
-GND,U1,XIAO ESP32-S3,GND,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",28 AWG black,Common ground
-GND,R3,100k bottom,2,100k 1/8 W,Right pod,28 AWG black,Common ground
-GND,R4,100k pulldown,2,100k 1/8 W,Right pod,28 AWG black,Common ground
-GND,U5,Mic,GND,Adafruit 3421 SPH0645LM4H,"Right pod, outer layer, front",28 AWG black,Common ground
-GND,U5,Mic,SEL,Adafruit 3421 SPH0645LM4H,"Right pod, outer layer, front",28 AWG black,Common ground
-GND,U6,Amp BONE,GND,Adafruit 3006 MAX98357A,"Right pod, inner layer",28 AWG black,Common ground
-GND,U7,Amp OUTWARD,GND,Adafruit 3006 MAX98357A,"Right pod, inner layer",28 AWG black,Common ground
-VBAT_SENSE,U8,Charger + 5V,VBAT (header pin 6),Adafruit 6106 bq25185 + TPS61023,"Left pod, rear bay",30 AWG green,Battery voltage to divider
-VBAT_SENSE,R2,100k top,1,100k 1/8 W,Right pod,30 AWG green,Battery voltage to divider
-VBAT_DIV,R2,100k top,2,100k 1/8 W,Right pod,local,Half battery voltage to ADC
-VBAT_DIV,R3,100k bottom,1,100k 1/8 W,Right pod,local,Half battery voltage to ADC
-VBAT_DIV,U1,XIAO ESP32-S3,D0 / A0,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",local,Half battery voltage to ADC
-3V3,U1,XIAO ESP32-S3,3V3,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",30 AWG (Qwiic red),Sensors and PTT feed
-3V3,U3,IMU,3V3 (Qwiic),Adafruit 4438 LSM6DSOX,"Right pod, outer layer",30 AWG (Qwiic red),Sensors and PTT feed
-3V3,U2,ToF 8x8,3V3 (Qwiic),SparkFun SEN-19013 VL53L5CX Mini,Bridge pocket,30 AWG (Qwiic red),Sensors and PTT feed
-3V3,U4,BME280,VIN,"GY-BME280 3.3 V, 4-pin",Left brow pocket,30 AWG (Qwiic red),Sensors and PTT feed
-3V3,SW2,PTT button,pin 1,"6x6 tact switch, Omron B3F-1000",Right frame endpiece (top),30 AWG (Qwiic red),Sensors and PTT feed
-MIC_3V3,SW2,PTT button,pin 3,"6x6 tact switch, Omron B3F-1000",Right frame endpiece (top),30 AWG white,"Mic power, ONLY while PTT held"
-MIC_3V3,R1,1k,1,1k 1/8 W,Right frame endpiece,30 AWG white,"Mic power, ONLY while PTT held"
-MIC_3V3,U5,Mic,3V,Adafruit 3421 SPH0645LM4H,"Right pod, outer layer, front",30 AWG white,"Mic power, ONLY while PTT held"
-MIC_3V3,D3,1N4148,anode,1N4148,Right pod,30 AWG white,"Mic power, ONLY while PTT held"
-LED_A,R1,1k,2,1k 1/8 W,Right frame endpiece,local,LED current limit
-LED_A,D1,Privacy LED,anode (long leg),3 mm red LED,Right frame endpiece (front),local,LED current limit
-PTT_SENSE,D3,1N4148,cathode (band),1N4148,Right pod,local,"PTT state to MCU, one-way"
-PTT_SENSE,R4,100k pulldown,1,100k 1/8 W,Right pod,local,"PTT state to MCU, one-way"
-PTT_SENSE,U1,XIAO ESP32-S3,D1,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",local,"PTT state to MCU, one-way"
-SDA,U1,XIAO ESP32-S3,D4,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",30 AWG (Qwiic blue),I2C data
-SDA,U3,IMU,SDA (Qwiic),Adafruit 4438 LSM6DSOX,"Right pod, outer layer",30 AWG (Qwiic blue),I2C data
-SDA,U2,ToF 8x8,SDA (Qwiic),SparkFun SEN-19013 VL53L5CX Mini,Bridge pocket,30 AWG (Qwiic blue),I2C data
-SDA,U4,BME280,SDA,"GY-BME280 3.3 V, 4-pin",Left brow pocket,30 AWG (Qwiic blue),I2C data
-SCL,U1,XIAO ESP32-S3,D5,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",30 AWG (Qwiic yellow),I2C clock
-SCL,U3,IMU,SCL (Qwiic),Adafruit 4438 LSM6DSOX,"Right pod, outer layer",30 AWG (Qwiic yellow),I2C clock
-SCL,U2,ToF 8x8,SCL (Qwiic),SparkFun SEN-19013 VL53L5CX Mini,Bridge pocket,30 AWG (Qwiic yellow),I2C clock
-SCL,U4,BME280,SCL,"GY-BME280 3.3 V, 4-pin",Left brow pocket,30 AWG (Qwiic yellow),I2C clock
-I2S_BCLK,U1,XIAO ESP32-S3,D8,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",local,I2S bit clock
-I2S_BCLK,U5,Mic,BCLK,Adafruit 3421 SPH0645LM4H,"Right pod, outer layer, front",local,I2S bit clock
-I2S_BCLK,U6,Amp BONE,BCLK,Adafruit 3006 MAX98357A,"Right pod, inner layer",local,I2S bit clock
-I2S_BCLK,U7,Amp OUTWARD,BCLK,Adafruit 3006 MAX98357A,"Right pod, inner layer",local,I2S bit clock
-I2S_WS,U1,XIAO ESP32-S3,D9,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",local,I2S word select
-I2S_WS,U5,Mic,LRCL,Adafruit 3421 SPH0645LM4H,"Right pod, outer layer, front",local,I2S word select
-I2S_WS,U6,Amp BONE,LRC,Adafruit 3006 MAX98357A,"Right pod, inner layer",local,I2S word select
-I2S_WS,U7,Amp OUTWARD,LRC,Adafruit 3006 MAX98357A,"Right pod, inner layer",local,I2S word select
-I2S_TX,U1,XIAO ESP32-S3,D10,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",local,Audio to amps
-I2S_TX,U6,Amp BONE,DIN,Adafruit 3006 MAX98357A,"Right pod, inner layer",local,Audio to amps
-I2S_TX,U7,Amp OUTWARD,DIN,Adafruit 3006 MAX98357A,"Right pod, inner layer",local,Audio to amps
-I2S_RX,U5,Mic,DOUT,Adafruit 3421 SPH0645LM4H,"Right pod, outer layer, front",local,Audio from mic
-I2S_RX,U1,XIAO ESP32-S3,D7,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",local,Audio from mic
-SD_BONE,U1,XIAO ESP32-S3,D2,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",local,Bone amp on/off
-SD_BONE,U6,Amp BONE,SD,Adafruit 3006 MAX98357A,"Right pod, inner layer",local,Bone amp on/off
-SD_OUT,U1,XIAO ESP32-S3,D3,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",local,Outward amp on/off
-SD_OUT,U7,Amp OUTWARD,SD,Adafruit 3006 MAX98357A,"Right pod, inner layer",local,Outward amp on/off
-BONE+,U6,Amp BONE,OUT +,Adafruit 3006 MAX98357A,"Right pod, inner layer",30 AWG pair,To ear-grip transducer
-BONE+,LS2,Bone transducer,+,Adafruit 1674 8 ohm 1 W,Right ear grip cradle,30 AWG pair,To ear-grip transducer
-BONE-,U6,Amp BONE,OUT -,Adafruit 3006 MAX98357A,"Right pod, inner layer",30 AWG pair,
-BONE-,LS2,Bone transducer,-,Adafruit 1674 8 ohm 1 W,Right ear grip cradle,30 AWG pair,
-SPK+,U7,Amp OUTWARD,OUT +,Adafruit 3006 MAX98357A,"Right pod, inner layer",30 AWG pair,To pod speaker
-SPK+,LS1,Speaker,+,15 mm 8 ohm micro speaker,"Right pod, inner wall grille",30 AWG pair,To pod speaker
-SPK-,U7,Amp OUTWARD,OUT -,Adafruit 3006 MAX98357A,"Right pod, inner layer",30 AWG pair,
-SPK-,LS1,Speaker,-,15 mm 8 ohm micro speaker,"Right pod, inner wall grille",30 AWG pair,
-MEDIA_EN,U1,XIAO ESP32-S3,D6,Seeed XIAO ESP32-S3 (non-Sense),"Right pod, outer layer, rear",test pad,"Future media gate, LOW by default"
-NC / prep,U6,Amp BONE,GAIN,Adafruit 3006 MAX98357A,"Right pod, inner layer",,leave open (9 dB)
-NC / prep,U7,Amp OUTWARD,GAIN,Adafruit 3006 MAX98357A,"Right pod, inner layer",,leave open (9 dB)
-NC / prep,U8,Charger + 5V,EN,Adafruit 6106 bq25185 + TPS61023,"Left pod, rear bay",,leave open (boost on)
-NC / prep,U8,Charger + 5V,ISET jumper,Adafruit 6106 bq25185 + TPS61023,"Left pod, rear bay",,CUT -> 500 mA charge
-NC / prep,U8,Charger + 5V,R16,Adafruit 6106 bq25185 + TPS61023,"Left pod, rear bay",,"REMOVE, NTC goes on its pads"
-NC / prep,U2,ToF 8x8,LPn/INT,SparkFun SEN-19013 VL53L5CX Mini,Bridge pocket,,not used
+BAT+,BT1,Cell LEFT,+,Protected 1S LiPo 501040 200 mAh,Left earpiece,28 AWG red,Both cells in parallel
+BAT+,BT2,Cell RIGHT,+,Protected 1S LiPo 501040 200 mAh,Right earpiece,28 AWG red,Both cells in parallel
+BAT+,SW1,Main power,COM,Wurth 452403012014 DPDT slide,Visor crest top,28 AWG red,Both cells in parallel
+BAT_SW,SW1,Main power,throw A,Wurth 452403012014 DPDT slide,Visor crest top,local,Switched battery
+BAT_SW,U1,XIAO ESP32-S3,BAT+ pad,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,Switched battery
+BAT_SW,R2,100k top,1,100k 1/8 W,Visor bridge,local,Switched battery
+VBAT_DIV,R2,100k top,2,100k 1/8 W,Visor bridge,local,Half battery voltage to ADC
+VBAT_DIV,R3,100k bottom,1,100k 1/8 W,Visor bridge,local,Half battery voltage to ADC
+VBAT_DIV,U1,XIAO ESP32-S3,D3 (A2),Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,Half battery voltage to ADC
+VBUS_5V,J1,Brick cable,USB VBUS,"micro-HDMI->HDMI + USB 4-core, braided","Enters visor crest, left side",USB red,5 V from the brick / power bank
+VBUS_5V,D2,1N5817,anode,1N5817 Schottky,Visor crest,USB red,5 V from the brick / power bank
+VBUS_5V,SW2,Camera kill,COM,Wurth 452403012014 DPDT slide,Visor crest top,USB red,5 V from the brick / power bank
+VBUS_5V,U7,Micro-OLED board,5V in,Dual 0.71in micro-OLED HDMI driver,Visor crest bay,USB red,5 V from the brick / power bank
+XIAO_5V,D2,1N5817,cathode (band),1N5817 Schottky,Visor crest,local,"XIAO 5V pin, also charges the cells"
+XIAO_5V,U1,XIAO ESP32-S3,5V,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,"XIAO 5V pin, also charges the cells"
+CAM_5V,SW2,Camera kill,throw A,Wurth 452403012014 DPDT slide,Visor crest top,local,"Camera power, ONLY with SW2 on"
+CAM_5V,U2,Camera,5V (USB VBUS),Arducam IMX708 UVC 102 deg,"Visor centre bridge, front",local,"Camera power, ONLY with SW2 on"
+CAM_5V,R1,1k,1,1k 1/8 W,Visor crest,local,"Camera power, ONLY with SW2 on"
+LED_A,R1,1k,2,1k 1/8 W,Visor crest,local,LED current limit
+LED_A,D1,CAMERA LIVE LED,anode (long leg),3 mm red LED,"Visor front, beside camera",local,LED current limit
+GND,BT1,Cell LEFT,-,Protected 1S LiPo 501040 200 mAh,Left earpiece,28 AWG black,Common ground
+GND,BT2,Cell RIGHT,-,Protected 1S LiPo 501040 200 mAh,Right earpiece,28 AWG black,Common ground
+GND,J1,Brick cable,USB GND / HDMI shell,"micro-HDMI->HDMI + USB 4-core, braided","Enters visor crest, left side",28 AWG black,Common ground
+GND,U1,XIAO ESP32-S3,GND + BAT- pad,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",28 AWG black,Common ground
+GND,R3,100k bottom,2,100k 1/8 W,Visor bridge,28 AWG black,Common ground
+GND,D1,CAMERA LIVE LED,cathode,3 mm red LED,"Visor front, beside camera",28 AWG black,Common ground
+GND,U2,Camera,GND,Arducam IMX708 UVC 102 deg,"Visor centre bridge, front",28 AWG black,Common ground
+GND,U3,IMU,GND,Adafruit 4438 LSM6DSOX,Visor bridge,28 AWG black,Common ground
+GND,U4,Hall switch,GND,TI DRV5032FA on SOT-23 adapter,"Back of visor bridge, faces brow magnet",28 AWG black,Common ground
+GND,U5,LCD LEFT,GND,Waveshare 1.69in 240x280 ST7789V2,"Left pod, front",28 AWG black,Common ground
+GND,U6,LCD RIGHT,GND,Waveshare 1.69in 240x280 ST7789V2,"Right pod, front",28 AWG black,Common ground
+GND,U7,Micro-OLED board,GND,Dual 0.71in micro-OLED HDMI driver,Visor crest bay,28 AWG black,Common ground
+GND,SW3,Action button,pin 2,Omron B3F-1000 6x6 tact,Visor crest top flexure,28 AWG black,Common ground
+3V3,U1,XIAO ESP32-S3,3V3,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,Logic supply from the XIAO
+3V3,U3,IMU,VIN (Qwiic),Adafruit 4438 LSM6DSOX,Visor bridge,local,Logic supply from the XIAO
+3V3,U4,Hall switch,VCC,TI DRV5032FA on SOT-23 adapter,"Back of visor bridge, faces brow magnet",local,Logic supply from the XIAO
+3V3,U5,LCD LEFT,VCC + RST,Waveshare 1.69in 240x280 ST7789V2,"Left pod, front",local,Logic supply from the XIAO
+3V3,U6,LCD RIGHT,VCC + RST,Waveshare 1.69in 240x280 ST7789V2,"Right pod, front",local,Logic supply from the XIAO
+USB_D+,J1,Brick cable,USB D+,"micro-HDMI->HDMI + USB 4-core, braided","Enters visor crest, left side",USB green,Camera USB data to the brick
+USB_D+,U2,Camera,D+,Arducam IMX708 UVC 102 deg,"Visor centre bridge, front",USB green,Camera USB data to the brick
+USB_D-,J1,Brick cable,USB D-,"micro-HDMI->HDMI + USB 4-core, braided","Enters visor crest, left side",USB white,
+USB_D-,U2,Camera,D-,Arducam IMX708 UVC 102 deg,"Visor centre bridge, front",USB white,
+HDMI,J1,Brick cable,HDMI,"micro-HDMI->HDMI + USB 4-core, braided","Enters visor crest, left side",HDMI cable,Side-by-side 3840x1080 video
+HDMI,U7,Micro-OLED board,HDMI in,Dual 0.71in micro-OLED HDMI driver,Visor crest bay,HDMI cable,Side-by-side 3840x1080 video
+SPI_SCK,U1,XIAO ESP32-S3,D8,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,LCD clock (shared)
+SPI_SCK,U5,LCD LEFT,CLK,Waveshare 1.69in 240x280 ST7789V2,"Left pod, front",local,LCD clock (shared)
+SPI_SCK,U6,LCD RIGHT,CLK,Waveshare 1.69in 240x280 ST7789V2,"Right pod, front",local,LCD clock (shared)
+SPI_MOSI,U1,XIAO ESP32-S3,D10,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,LCD data (shared)
+SPI_MOSI,U5,LCD LEFT,DIN,Waveshare 1.69in 240x280 ST7789V2,"Left pod, front",local,LCD data (shared)
+SPI_MOSI,U6,LCD RIGHT,DIN,Waveshare 1.69in 240x280 ST7789V2,"Right pod, front",local,LCD data (shared)
+LCD_DC,U1,XIAO ESP32-S3,D2,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,Data / command (shared)
+LCD_DC,U5,LCD LEFT,DC,Waveshare 1.69in 240x280 ST7789V2,"Left pod, front",local,Data / command (shared)
+LCD_DC,U6,LCD RIGHT,DC,Waveshare 1.69in 240x280 ST7789V2,"Right pod, front",local,Data / command (shared)
+CS_L,U1,XIAO ESP32-S3,D0,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,Select left LCD
+CS_L,U5,LCD LEFT,CS,Waveshare 1.69in 240x280 ST7789V2,"Left pod, front",local,Select left LCD
+CS_R,U1,XIAO ESP32-S3,D1,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,Select right LCD
+CS_R,U6,LCD RIGHT,CS,Waveshare 1.69in 240x280 ST7789V2,"Right pod, front",local,Select right LCD
+LCD_BL,U1,XIAO ESP32-S3,D6,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,Backlight PWM (shared)
+LCD_BL,U5,LCD LEFT,BL,Waveshare 1.69in 240x280 ST7789V2,"Left pod, front",local,Backlight PWM (shared)
+LCD_BL,U6,LCD RIGHT,BL,Waveshare 1.69in 240x280 ST7789V2,"Right pod, front",local,Backlight PWM (shared)
+SDA,U1,XIAO ESP32-S3,D4,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",Qwiic blue,I2C data
+SDA,U3,IMU,SDA (Qwiic),Adafruit 4438 LSM6DSOX,Visor bridge,Qwiic blue,I2C data
+SCL,U1,XIAO ESP32-S3,D5,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",Qwiic yellow,I2C clock
+SCL,U3,IMU,SCL (Qwiic),Adafruit 4438 LSM6DSOX,Visor bridge,Qwiic yellow,I2C clock
+HALL,U4,Hall switch,OUT,TI DRV5032FA on SOT-23 adapter,"Back of visor bridge, faces brow magnet",local,Visor down = LOW
+HALL,U1,XIAO ESP32-S3,D7,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,Visor down = LOW
+BUTTON,SW3,Action button,pin 1,Omron B3F-1000 6x6 tact,Visor crest top flexure,local,Action button (pull-up)
+BUTTON,U1,XIAO ESP32-S3,D9,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",local,Action button (pull-up)
+OLED_FPC,U7,Micro-OLED board,FPC L / FPC R,Dual 0.71in micro-OLED HDMI driver,Visor crest bay,panel flex,Panel flex cables
+NC / prep,U5,LCD LEFT,RST,Waveshare 1.69in 240x280 ST7789V2,"Left pod, front",,tie to 3V3 (the firmware sends a software reset)
+NC / prep,U6,LCD RIGHT,RST,Waveshare 1.69in 240x280 ST7789V2,"Right pod, front",,tie to 3V3
+NC / prep,U1,XIAO ESP32-S3,D3,Seeed XIAO ESP32-S3 (non-Sense),"Visor bridge, behind camera",,ADC: VBAT/2
+NC / prep,U7,Micro-OLED board,5V in,Dual 0.71in micro-OLED HDMI driver,Visor crest bay,,"power the HDMI board from VBUS, never from the XIAO 3V3"
+NC / prep,BT1,Cell LEFT,before joining,Protected 1S LiPo 501040 200 mAh,Left earpiece,,"charge both cells to 4.2 V separately, then wire them in parallel"

@@ -1,196 +1,149 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 834 1970" width="834" height="1970" font-family="Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 698 1588" width="698" height="1588" font-family="Helvetica,Arial,sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<text x="20" y="34" font-size="24" font-weight="700" fill="#14181d">Power + microphone privacy</text>
-<text x="20" y="56" font-size="13" fill="#5d6773">Modules in physical order: left temple → frame → right temple. Each coloured rail is one net.</text>
+<text x="20" y="34" font-size="24" font-weight="700" fill="#14181d">Power + camera privacy</text>
+<text x="20" y="56" font-size="13" fill="#5d6773">Modules in physical order: earpieces → brick cable → visor. Each coloured rail is one net.</text>
 <text x="20" y="74" font-size="13" fill="#5d6773">A dot is a connection. A line that crosses a rail without a dot is not connected.</text>
-<line x1="400" y1="240" x2="400" y2="414" stroke="#c0392b" stroke-width="4"/>
-<text transform="translate(404,178) rotate(-60)" font-size="13" font-weight="700" fill="#c0392b">BATT</text>
-<line x1="434" y1="316" x2="434" y2="436" stroke="#8e44ad" stroke-width="4"/>
-<text transform="translate(438,178) rotate(-60)" font-size="13" font-weight="700" fill="#8e44ad">THERM</text>
-<line x1="468" y1="458" x2="468" y2="608" stroke="#e74c3c" stroke-width="4"/>
-<text transform="translate(472,178) rotate(-60)" font-size="13" font-weight="700" fill="#e74c3c">5V_RAW</text>
-<line x1="502" y1="630" x2="502" y2="1902" stroke="#ff7f50" stroke-width="4"/>
-<text transform="translate(506,178) rotate(-60)" font-size="13" font-weight="700" fill="#ff7f50">5V_SW</text>
-<line x1="536" y1="1030" x2="536" y2="1216" stroke="#ff9f80" stroke-width="4"/>
-<text transform="translate(540,178) rotate(-60)" font-size="13" font-weight="700" fill="#ff9f80">5V_XIAO</text>
-<line x1="570" y1="338" x2="570" y2="1924" stroke="#2c3e50" stroke-width="4"/>
-<text transform="translate(574,178) rotate(-60)" font-size="13" font-weight="700" fill="#2c3e50">GND</text>
-<line x1="604" y1="502" x2="604" y2="1292" stroke="#27ae60" stroke-width="4"/>
-<text transform="translate(608,178) rotate(-60)" font-size="13" font-weight="700" fill="#27ae60">VBAT_SENSE</text>
-<line x1="638" y1="1074" x2="638" y2="1412" stroke="#2ecc71" stroke-width="4"/>
-<text transform="translate(642,178) rotate(-60)" font-size="13" font-weight="700" fill="#2ecc71">VBAT_DIV</text>
-<line x1="672" y1="706" x2="672" y2="1096" stroke="#f39c12" stroke-width="4"/>
-<text transform="translate(676,178) rotate(-60)" font-size="13" font-weight="700" fill="#f39c12">3V3</text>
-<line x1="706" y1="728" x2="706" y2="1728" stroke="#e84393" stroke-width="4"/>
-<text transform="translate(710,178) rotate(-60)" font-size="13" font-weight="700" fill="#e84393">MIC_3V3</text>
-<line x1="740" y1="826" x2="740" y2="924" stroke="#fd79a8" stroke-width="4"/>
-<text transform="translate(744,178) rotate(-60)" font-size="13" font-weight="700" fill="#fd79a8">LED_A</text>
-<line x1="774" y1="1118" x2="774" y2="1608" stroke="#a29bfe" stroke-width="4"/>
-<text transform="translate(778,178) rotate(-60)" font-size="13" font-weight="700" fill="#a29bfe">PTT_SENSE</text>
-<rect x="20" y="190" width="330" height="62" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="210" font-size="15" font-weight="700" fill="#14181d">BT1 · Battery</text>
-<text x="32" y="224" font-size="11" fill="#5d6773">Left pod, front bay</text>
-<text x="340" y="244" font-size="12.5" text-anchor="end" fill="#14181d">JST-PH</text>
+<line x1="400" y1="240" x2="400" y2="594" stroke="#c0392b" stroke-width="4"/>
+<text transform="translate(404,178) rotate(-60)" font-size="13" font-weight="700" fill="#c0392b">BAT+</text>
+<line x1="434" y1="616" x2="434" y2="888" stroke="#e74c3c" stroke-width="4"/>
+<text transform="translate(438,178) rotate(-60)" font-size="13" font-weight="700" fill="#e74c3c">BAT_SW</text>
+<line x1="468" y1="714" x2="468" y2="910" stroke="#2ecc71" stroke-width="4"/>
+<text transform="translate(472,178) rotate(-60)" font-size="13" font-weight="700" fill="#2ecc71">VBAT_DIV</text>
+<line x1="502" y1="466" x2="502" y2="1520" stroke="#ff7f50" stroke-width="4"/>
+<text transform="translate(506,178) rotate(-60)" font-size="13" font-weight="700" fill="#ff7f50">VBUS_5V</text>
+<line x1="536" y1="932" x2="536" y2="1052" stroke="#ff9f80" stroke-width="4"/>
+<text transform="translate(540,178) rotate(-60)" font-size="13" font-weight="700" fill="#ff9f80">XIAO_5V</text>
+<line x1="570" y1="1150" x2="570" y2="1422" stroke="#e84393" stroke-width="4"/>
+<text transform="translate(574,178) rotate(-60)" font-size="13" font-weight="700" fill="#e84393">CAM_5V</text>
+<line x1="604" y1="1248" x2="604" y2="1324" stroke="#fd79a8" stroke-width="4"/>
+<text transform="translate(608,178) rotate(-60)" font-size="13" font-weight="700" fill="#fd79a8">LED_A</text>
+<line x1="638" y1="262" x2="638" y2="1542" stroke="#2c3e50" stroke-width="4"/>
+<text transform="translate(642,178) rotate(-60)" font-size="13" font-weight="700" fill="#2c3e50">GND</text>
+<rect x="20" y="190" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="210" font-size="15" font-weight="700" fill="#14181d">BT1 · Cell LEFT</text>
+<text x="32" y="224" font-size="11" fill="#5d6773">Left earpiece</text>
+<text x="340" y="244" font-size="12.5" text-anchor="end" fill="#14181d">+</text>
 <line x1="350" y1="240" x2="400" y2="240" stroke="#c0392b" stroke-width="2.4"/>
 <circle cx="350" cy="240" r="3.5" fill="#2c3e50"/><circle cx="400" cy="240" r="5" fill="#c0392b"/>
-<rect x="20" y="266" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="286" font-size="15" font-weight="700" fill="#14181d">TH1 · NTC 10k</text>
-<text x="32" y="300" font-size="11" fill="#5d6773">Taped to BT1</text>
-<text x="340" y="320" font-size="12.5" text-anchor="end" fill="#14181d">lead A</text>
-<line x1="350" y1="316" x2="434" y2="316" stroke="#8e44ad" stroke-width="2.4"/>
-<circle cx="350" cy="316" r="3.5" fill="#2c3e50"/><circle cx="434" cy="316" r="5" fill="#8e44ad"/>
-<text x="340" y="342" font-size="12.5" text-anchor="end" fill="#14181d">lead B -&gt; R16 GND pad</text>
-<line x1="350" y1="338" x2="570" y2="338" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="338" r="3.5" fill="#2c3e50"/><circle cx="570" cy="338" r="5" fill="#2c3e50"/>
-<rect x="20" y="364" width="330" height="150" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="384" font-size="15" font-weight="700" fill="#14181d">U8 · Charger + 5V</text>
-<text x="32" y="398" font-size="11" fill="#5d6773">Left pod, rear bay</text>
-<text x="340" y="418" font-size="12.5" text-anchor="end" fill="#14181d">BATT JST-PH</text>
-<line x1="350" y1="414" x2="400" y2="414" stroke="#c0392b" stroke-width="2.4"/>
-<circle cx="350" cy="414" r="3.5" fill="#2c3e50"/><circle cx="400" cy="414" r="5" fill="#c0392b"/>
-<text x="340" y="440" font-size="12.5" text-anchor="end" fill="#14181d">R16 pad (THERM side)</text>
-<line x1="350" y1="436" x2="434" y2="436" stroke="#8e44ad" stroke-width="2.4"/>
-<circle cx="350" cy="436" r="3.5" fill="#2c3e50"/><circle cx="434" cy="436" r="5" fill="#8e44ad"/>
-<text x="340" y="462" font-size="12.5" text-anchor="end" fill="#14181d">5V +</text>
-<line x1="350" y1="458" x2="468" y2="458" stroke="#e74c3c" stroke-width="2.4"/>
-<circle cx="350" cy="458" r="3.5" fill="#2c3e50"/><circle cx="468" cy="458" r="5" fill="#e74c3c"/>
-<text x="340" y="484" font-size="12.5" text-anchor="end" fill="#14181d">5V -</text>
-<line x1="350" y1="480" x2="570" y2="480" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="480" r="3.5" fill="#2c3e50"/><circle cx="570" cy="480" r="5" fill="#2c3e50"/>
-<text x="340" y="506" font-size="12.5" text-anchor="end" fill="#14181d">VBAT (header pin 6)</text>
-<line x1="350" y1="502" x2="604" y2="502" stroke="#27ae60" stroke-width="2.4"/>
-<circle cx="350" cy="502" r="3.5" fill="#2c3e50"/><circle cx="604" cy="502" r="5" fill="#27ae60"/>
-<line x1="10" y1="536" x2="824" y2="536" stroke="#9aa3ad" stroke-width="2" stroke-dasharray="8 6"/>
-<text x="20" y="530" font-size="12" font-weight="700" fill="#5d6773">LEFT HINGE  (wires pass through the brass tube)</text>
-<rect x="20" y="558" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="578" font-size="15" font-weight="700" fill="#14181d">SW1 · Main switch</text>
-<text x="32" y="592" font-size="11" fill="#5d6773">Left frame endpiece</text>
-<text x="340" y="612" font-size="12.5" text-anchor="end" fill="#14181d">COM</text>
-<line x1="350" y1="608" x2="468" y2="608" stroke="#e74c3c" stroke-width="2.4"/>
-<circle cx="350" cy="608" r="3.5" fill="#2c3e50"/><circle cx="468" cy="608" r="5" fill="#e74c3c"/>
-<text x="340" y="634" font-size="12.5" text-anchor="end" fill="#14181d">throw A</text>
-<line x1="350" y1="630" x2="502" y2="630" stroke="#ff7f50" stroke-width="2.4"/>
-<circle cx="350" cy="630" r="3.5" fill="#2c3e50"/><circle cx="502" cy="630" r="5" fill="#ff7f50"/>
-<rect x="20" y="656" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="676" font-size="15" font-weight="700" fill="#14181d">SW2 · PTT button</text>
-<text x="32" y="690" font-size="11" fill="#5d6773">Right frame endpiece (top)</text>
-<text x="340" y="710" font-size="12.5" text-anchor="end" fill="#14181d">pin 1</text>
-<line x1="350" y1="706" x2="672" y2="706" stroke="#f39c12" stroke-width="2.4"/>
-<circle cx="350" cy="706" r="3.5" fill="#2c3e50"/><circle cx="672" cy="706" r="5" fill="#f39c12"/>
-<text x="340" y="732" font-size="12.5" text-anchor="end" fill="#14181d">pin 3</text>
-<line x1="350" y1="728" x2="706" y2="728" stroke="#e84393" stroke-width="2.4"/>
-<circle cx="350" cy="728" r="3.5" fill="#2c3e50"/><circle cx="706" cy="728" r="5" fill="#e84393"/>
-<rect x="20" y="754" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="774" font-size="15" font-weight="700" fill="#14181d">R1 · 1k</text>
-<text x="32" y="788" font-size="11" fill="#5d6773">Right frame endpiece</text>
-<text x="340" y="808" font-size="12.5" text-anchor="end" fill="#14181d">1</text>
-<line x1="350" y1="804" x2="706" y2="804" stroke="#e84393" stroke-width="2.4"/>
-<circle cx="350" cy="804" r="3.5" fill="#2c3e50"/><circle cx="706" cy="804" r="5" fill="#e84393"/>
-<text x="340" y="830" font-size="12.5" text-anchor="end" fill="#14181d">2</text>
-<line x1="350" y1="826" x2="740" y2="826" stroke="#fd79a8" stroke-width="2.4"/>
-<circle cx="350" cy="826" r="3.5" fill="#2c3e50"/><circle cx="740" cy="826" r="5" fill="#fd79a8"/>
-<rect x="20" y="852" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="872" font-size="15" font-weight="700" fill="#14181d">D1 · Privacy LED</text>
-<text x="32" y="886" font-size="11" fill="#5d6773">Right frame endpiece (front)</text>
-<text x="340" y="906" font-size="12.5" text-anchor="end" fill="#14181d">cathode (short leg)</text>
-<line x1="350" y1="902" x2="570" y2="902" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="902" r="3.5" fill="#2c3e50"/><circle cx="570" cy="902" r="5" fill="#2c3e50"/>
-<text x="340" y="928" font-size="12.5" text-anchor="end" fill="#14181d">anode (long leg)</text>
-<line x1="350" y1="924" x2="740" y2="924" stroke="#fd79a8" stroke-width="2.4"/>
-<circle cx="350" cy="924" r="3.5" fill="#2c3e50"/><circle cx="740" cy="924" r="5" fill="#fd79a8"/>
-<line x1="10" y1="958" x2="824" y2="958" stroke="#9aa3ad" stroke-width="2" stroke-dasharray="8 6"/>
-<text x="20" y="952" font-size="12" font-weight="700" fill="#5d6773">RIGHT HINGE  (wires pass through the brass tube)</text>
-<rect x="20" y="980" width="330" height="150" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1000" font-size="15" font-weight="700" fill="#14181d">U1 · XIAO ESP32-S3</text>
-<text x="32" y="1014" font-size="11" fill="#5d6773">Right pod, outer layer, rear</text>
-<text x="340" y="1034" font-size="12.5" text-anchor="end" fill="#14181d">5V</text>
-<line x1="350" y1="1030" x2="536" y2="1030" stroke="#ff9f80" stroke-width="2.4"/>
-<circle cx="350" cy="1030" r="3.5" fill="#2c3e50"/><circle cx="536" cy="1030" r="5" fill="#ff9f80"/>
-<text x="340" y="1056" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="1052" x2="570" y2="1052" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="1052" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1052" r="5" fill="#2c3e50"/>
-<text x="340" y="1078" font-size="12.5" text-anchor="end" fill="#14181d">D0 / A0</text>
-<line x1="350" y1="1074" x2="638" y2="1074" stroke="#2ecc71" stroke-width="2.4"/>
-<circle cx="350" cy="1074" r="3.5" fill="#2c3e50"/><circle cx="638" cy="1074" r="5" fill="#2ecc71"/>
-<text x="340" y="1100" font-size="12.5" text-anchor="end" fill="#14181d">3V3</text>
-<line x1="350" y1="1096" x2="672" y2="1096" stroke="#f39c12" stroke-width="2.4"/>
-<circle cx="350" cy="1096" r="3.5" fill="#2c3e50"/><circle cx="672" cy="1096" r="5" fill="#f39c12"/>
-<text x="340" y="1122" font-size="12.5" text-anchor="end" fill="#14181d">D1</text>
-<line x1="350" y1="1118" x2="774" y2="1118" stroke="#a29bfe" stroke-width="2.4"/>
-<circle cx="350" cy="1118" r="3.5" fill="#2c3e50"/><circle cx="774" cy="1118" r="5" fill="#a29bfe"/>
-<rect x="20" y="1144" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1164" font-size="15" font-weight="700" fill="#14181d">D2 · 1N5817</text>
-<text x="32" y="1178" font-size="11" fill="#5d6773">Right pod</text>
-<text x="340" y="1198" font-size="12.5" text-anchor="end" fill="#14181d">anode</text>
-<line x1="350" y1="1194" x2="502" y2="1194" stroke="#ff7f50" stroke-width="2.4"/>
-<circle cx="350" cy="1194" r="3.5" fill="#2c3e50"/><circle cx="502" cy="1194" r="5" fill="#ff7f50"/>
-<text x="340" y="1220" font-size="12.5" text-anchor="end" fill="#14181d">cathode (band)</text>
-<line x1="350" y1="1216" x2="536" y2="1216" stroke="#ff9f80" stroke-width="2.4"/>
-<circle cx="350" cy="1216" r="3.5" fill="#2c3e50"/><circle cx="536" cy="1216" r="5" fill="#ff9f80"/>
-<rect x="20" y="1242" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1262" font-size="15" font-weight="700" fill="#14181d">R2 · 100k top</text>
-<text x="32" y="1276" font-size="11" fill="#5d6773">Right pod</text>
-<text x="340" y="1296" font-size="12.5" text-anchor="end" fill="#14181d">1</text>
-<line x1="350" y1="1292" x2="604" y2="1292" stroke="#27ae60" stroke-width="2.4"/>
-<circle cx="350" cy="1292" r="3.5" fill="#2c3e50"/><circle cx="604" cy="1292" r="5" fill="#27ae60"/>
-<text x="340" y="1318" font-size="12.5" text-anchor="end" fill="#14181d">2</text>
-<line x1="350" y1="1314" x2="638" y2="1314" stroke="#2ecc71" stroke-width="2.4"/>
-<circle cx="350" cy="1314" r="3.5" fill="#2c3e50"/><circle cx="638" cy="1314" r="5" fill="#2ecc71"/>
-<rect x="20" y="1340" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1360" font-size="15" font-weight="700" fill="#14181d">R3 · 100k bottom</text>
-<text x="32" y="1374" font-size="11" fill="#5d6773">Right pod</text>
-<text x="340" y="1394" font-size="12.5" text-anchor="end" fill="#14181d">2</text>
-<line x1="350" y1="1390" x2="570" y2="1390" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="1390" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1390" r="5" fill="#2c3e50"/>
-<text x="340" y="1416" font-size="12.5" text-anchor="end" fill="#14181d">1</text>
-<line x1="350" y1="1412" x2="638" y2="1412" stroke="#2ecc71" stroke-width="2.4"/>
-<circle cx="350" cy="1412" r="3.5" fill="#2c3e50"/><circle cx="638" cy="1412" r="5" fill="#2ecc71"/>
-<rect x="20" y="1438" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1458" font-size="15" font-weight="700" fill="#14181d">D3 · 1N4148</text>
-<text x="32" y="1472" font-size="11" fill="#5d6773">Right pod</text>
-<text x="340" y="1492" font-size="12.5" text-anchor="end" fill="#14181d">anode</text>
-<line x1="350" y1="1488" x2="706" y2="1488" stroke="#e84393" stroke-width="2.4"/>
-<circle cx="350" cy="1488" r="3.5" fill="#2c3e50"/><circle cx="706" cy="1488" r="5" fill="#e84393"/>
-<text x="340" y="1514" font-size="12.5" text-anchor="end" fill="#14181d">cathode (band)</text>
-<line x1="350" y1="1510" x2="774" y2="1510" stroke="#a29bfe" stroke-width="2.4"/>
-<circle cx="350" cy="1510" r="3.5" fill="#2c3e50"/><circle cx="774" cy="1510" r="5" fill="#a29bfe"/>
-<rect x="20" y="1536" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1556" font-size="15" font-weight="700" fill="#14181d">R4 · 100k pulldown</text>
-<text x="32" y="1570" font-size="11" fill="#5d6773">Right pod</text>
-<text x="340" y="1590" font-size="12.5" text-anchor="end" fill="#14181d">2</text>
-<line x1="350" y1="1586" x2="570" y2="1586" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="1586" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1586" r="5" fill="#2c3e50"/>
-<text x="340" y="1612" font-size="12.5" text-anchor="end" fill="#14181d">1</text>
-<line x1="350" y1="1608" x2="774" y2="1608" stroke="#a29bfe" stroke-width="2.4"/>
-<circle cx="350" cy="1608" r="3.5" fill="#2c3e50"/><circle cx="774" cy="1608" r="5" fill="#a29bfe"/>
-<rect x="20" y="1634" width="330" height="106" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1654" font-size="15" font-weight="700" fill="#14181d">U5 · Mic</text>
-<text x="32" y="1668" font-size="11" fill="#5d6773">Right pod, outer layer, front</text>
-<text x="340" y="1688" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="1684" x2="570" y2="1684" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="1684" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1684" r="5" fill="#2c3e50"/>
-<text x="340" y="1710" font-size="12.5" text-anchor="end" fill="#14181d">SEL</text>
-<line x1="350" y1="1706" x2="570" y2="1706" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="1706" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1706" r="5" fill="#2c3e50"/>
-<text x="340" y="1732" font-size="12.5" text-anchor="end" fill="#14181d">3V</text>
-<line x1="350" y1="1728" x2="706" y2="1728" stroke="#e84393" stroke-width="2.4"/>
-<circle cx="350" cy="1728" r="3.5" fill="#2c3e50"/><circle cx="706" cy="1728" r="5" fill="#e84393"/>
-<rect x="20" y="1754" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1774" font-size="15" font-weight="700" fill="#14181d">U6 · Amp BONE</text>
-<text x="32" y="1788" font-size="11" fill="#5d6773">Right pod, inner layer</text>
-<text x="340" y="1808" font-size="12.5" text-anchor="end" fill="#14181d">Vin</text>
-<line x1="350" y1="1804" x2="502" y2="1804" stroke="#ff7f50" stroke-width="2.4"/>
-<circle cx="350" cy="1804" r="3.5" fill="#2c3e50"/><circle cx="502" cy="1804" r="5" fill="#ff7f50"/>
-<text x="340" y="1830" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="1826" x2="570" y2="1826" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="1826" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1826" r="5" fill="#2c3e50"/>
-<rect x="20" y="1852" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
-<text x="32" y="1872" font-size="15" font-weight="700" fill="#14181d">U7 · Amp OUTWARD</text>
-<text x="32" y="1886" font-size="11" fill="#5d6773">Right pod, inner layer</text>
-<text x="340" y="1906" font-size="12.5" text-anchor="end" fill="#14181d">Vin</text>
-<line x1="350" y1="1902" x2="502" y2="1902" stroke="#ff7f50" stroke-width="2.4"/>
-<circle cx="350" cy="1902" r="3.5" fill="#2c3e50"/><circle cx="502" cy="1902" r="5" fill="#ff7f50"/>
-<text x="340" y="1928" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
-<line x1="350" y1="1924" x2="570" y2="1924" stroke="#2c3e50" stroke-width="2.4"/>
-<circle cx="350" cy="1924" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1924" r="5" fill="#2c3e50"/>
+<text x="340" y="266" font-size="12.5" text-anchor="end" fill="#14181d">-</text>
+<line x1="350" y1="262" x2="638" y2="262" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="262" r="3.5" fill="#2c3e50"/><circle cx="638" cy="262" r="5" fill="#2c3e50"/>
+<rect x="20" y="288" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="308" font-size="15" font-weight="700" fill="#14181d">BT2 · Cell RIGHT</text>
+<text x="32" y="322" font-size="11" fill="#5d6773">Right earpiece</text>
+<text x="340" y="342" font-size="12.5" text-anchor="end" fill="#14181d">+</text>
+<line x1="350" y1="338" x2="400" y2="338" stroke="#c0392b" stroke-width="2.4"/>
+<circle cx="350" cy="338" r="3.5" fill="#2c3e50"/><circle cx="400" cy="338" r="5" fill="#c0392b"/>
+<text x="340" y="364" font-size="12.5" text-anchor="end" fill="#14181d">-</text>
+<line x1="350" y1="360" x2="638" y2="360" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="360" r="3.5" fill="#2c3e50"/><circle cx="638" cy="360" r="5" fill="#2c3e50"/>
+<line x1="10" y1="394" x2="688" y2="394" stroke="#9aa3ad" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="20" y="388" font-size="12" font-weight="700" fill="#5d6773">TEMPLE + VISOR HINGES  (wires run through the brass tubes)</text>
+<rect x="20" y="416" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="436" font-size="15" font-weight="700" fill="#14181d">J1 · Brick cable</text>
+<text x="32" y="450" font-size="11" fill="#5d6773">Enters visor crest, left side</text>
+<text x="340" y="470" font-size="12.5" text-anchor="end" fill="#14181d">USB VBUS</text>
+<line x1="350" y1="466" x2="502" y2="466" stroke="#ff7f50" stroke-width="2.4"/>
+<circle cx="350" cy="466" r="3.5" fill="#2c3e50"/><circle cx="502" cy="466" r="5" fill="#ff7f50"/>
+<text x="340" y="492" font-size="12.5" text-anchor="end" fill="#14181d">USB GND / HDMI shell</text>
+<line x1="350" y1="488" x2="638" y2="488" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="488" r="3.5" fill="#2c3e50"/><circle cx="638" cy="488" r="5" fill="#2c3e50"/>
+<line x1="10" y1="522" x2="688" y2="522" stroke="#9aa3ad" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="20" y="516" font-size="12" font-weight="700" fill="#5d6773">INSIDE THE VISOR</text>
+<rect x="20" y="544" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="564" font-size="15" font-weight="700" fill="#14181d">SW1 · Main power</text>
+<text x="32" y="578" font-size="11" fill="#5d6773">Visor crest top</text>
+<text x="340" y="598" font-size="12.5" text-anchor="end" fill="#14181d">COM</text>
+<line x1="350" y1="594" x2="400" y2="594" stroke="#c0392b" stroke-width="2.4"/>
+<circle cx="350" cy="594" r="3.5" fill="#2c3e50"/><circle cx="400" cy="594" r="5" fill="#c0392b"/>
+<text x="340" y="620" font-size="12.5" text-anchor="end" fill="#14181d">throw A</text>
+<line x1="350" y1="616" x2="434" y2="616" stroke="#e74c3c" stroke-width="2.4"/>
+<circle cx="350" cy="616" r="3.5" fill="#2c3e50"/><circle cx="434" cy="616" r="5" fill="#e74c3c"/>
+<rect x="20" y="642" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="662" font-size="15" font-weight="700" fill="#14181d">R2 · 100k top</text>
+<text x="32" y="676" font-size="11" fill="#5d6773">Visor bridge</text>
+<text x="340" y="696" font-size="12.5" text-anchor="end" fill="#14181d">1</text>
+<line x1="350" y1="692" x2="434" y2="692" stroke="#e74c3c" stroke-width="2.4"/>
+<circle cx="350" cy="692" r="3.5" fill="#2c3e50"/><circle cx="434" cy="692" r="5" fill="#e74c3c"/>
+<text x="340" y="718" font-size="12.5" text-anchor="end" fill="#14181d">2</text>
+<line x1="350" y1="714" x2="468" y2="714" stroke="#2ecc71" stroke-width="2.4"/>
+<circle cx="350" cy="714" r="3.5" fill="#2c3e50"/><circle cx="468" cy="714" r="5" fill="#2ecc71"/>
+<rect x="20" y="740" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="760" font-size="15" font-weight="700" fill="#14181d">R3 · 100k bottom</text>
+<text x="32" y="774" font-size="11" fill="#5d6773">Visor bridge</text>
+<text x="340" y="794" font-size="12.5" text-anchor="end" fill="#14181d">1</text>
+<line x1="350" y1="790" x2="468" y2="790" stroke="#2ecc71" stroke-width="2.4"/>
+<circle cx="350" cy="790" r="3.5" fill="#2c3e50"/><circle cx="468" cy="790" r="5" fill="#2ecc71"/>
+<text x="340" y="816" font-size="12.5" text-anchor="end" fill="#14181d">2</text>
+<line x1="350" y1="812" x2="638" y2="812" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="812" r="3.5" fill="#2c3e50"/><circle cx="638" cy="812" r="5" fill="#2c3e50"/>
+<rect x="20" y="838" width="330" height="128" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="858" font-size="15" font-weight="700" fill="#14181d">U1 · XIAO ESP32-S3</text>
+<text x="32" y="872" font-size="11" fill="#5d6773">Visor bridge, behind camera</text>
+<text x="340" y="892" font-size="12.5" text-anchor="end" fill="#14181d">BAT+ pad</text>
+<line x1="350" y1="888" x2="434" y2="888" stroke="#e74c3c" stroke-width="2.4"/>
+<circle cx="350" cy="888" r="3.5" fill="#2c3e50"/><circle cx="434" cy="888" r="5" fill="#e74c3c"/>
+<text x="340" y="914" font-size="12.5" text-anchor="end" fill="#14181d">D3 (A2)</text>
+<line x1="350" y1="910" x2="468" y2="910" stroke="#2ecc71" stroke-width="2.4"/>
+<circle cx="350" cy="910" r="3.5" fill="#2c3e50"/><circle cx="468" cy="910" r="5" fill="#2ecc71"/>
+<text x="340" y="936" font-size="12.5" text-anchor="end" fill="#14181d">5V</text>
+<line x1="350" y1="932" x2="536" y2="932" stroke="#ff9f80" stroke-width="2.4"/>
+<circle cx="350" cy="932" r="3.5" fill="#2c3e50"/><circle cx="536" cy="932" r="5" fill="#ff9f80"/>
+<text x="340" y="958" font-size="12.5" text-anchor="end" fill="#14181d">GND + BAT- pad</text>
+<line x1="350" y1="954" x2="638" y2="954" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="954" r="3.5" fill="#2c3e50"/><circle cx="638" cy="954" r="5" fill="#2c3e50"/>
+<rect x="20" y="980" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1000" font-size="15" font-weight="700" fill="#14181d">D2 · 1N5817</text>
+<text x="32" y="1014" font-size="11" fill="#5d6773">Visor crest</text>
+<text x="340" y="1034" font-size="12.5" text-anchor="end" fill="#14181d">anode</text>
+<line x1="350" y1="1030" x2="502" y2="1030" stroke="#ff7f50" stroke-width="2.4"/>
+<circle cx="350" cy="1030" r="3.5" fill="#2c3e50"/><circle cx="502" cy="1030" r="5" fill="#ff7f50"/>
+<text x="340" y="1056" font-size="12.5" text-anchor="end" fill="#14181d">cathode (band)</text>
+<line x1="350" y1="1052" x2="536" y2="1052" stroke="#ff9f80" stroke-width="2.4"/>
+<circle cx="350" cy="1052" r="3.5" fill="#2c3e50"/><circle cx="536" cy="1052" r="5" fill="#ff9f80"/>
+<rect x="20" y="1078" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1098" font-size="15" font-weight="700" fill="#14181d">SW2 · Camera kill</text>
+<text x="32" y="1112" font-size="11" fill="#5d6773">Visor crest top</text>
+<text x="340" y="1132" font-size="12.5" text-anchor="end" fill="#14181d">COM</text>
+<line x1="350" y1="1128" x2="502" y2="1128" stroke="#ff7f50" stroke-width="2.4"/>
+<circle cx="350" cy="1128" r="3.5" fill="#2c3e50"/><circle cx="502" cy="1128" r="5" fill="#ff7f50"/>
+<text x="340" y="1154" font-size="12.5" text-anchor="end" fill="#14181d">throw A</text>
+<line x1="350" y1="1150" x2="570" y2="1150" stroke="#e84393" stroke-width="2.4"/>
+<circle cx="350" cy="1150" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1150" r="5" fill="#e84393"/>
+<rect x="20" y="1176" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1196" font-size="15" font-weight="700" fill="#14181d">R1 · 1k</text>
+<text x="32" y="1210" font-size="11" fill="#5d6773">Visor crest</text>
+<text x="340" y="1230" font-size="12.5" text-anchor="end" fill="#14181d">1</text>
+<line x1="350" y1="1226" x2="570" y2="1226" stroke="#e84393" stroke-width="2.4"/>
+<circle cx="350" cy="1226" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1226" r="5" fill="#e84393"/>
+<text x="340" y="1252" font-size="12.5" text-anchor="end" fill="#14181d">2</text>
+<line x1="350" y1="1248" x2="604" y2="1248" stroke="#fd79a8" stroke-width="2.4"/>
+<circle cx="350" cy="1248" r="3.5" fill="#2c3e50"/><circle cx="604" cy="1248" r="5" fill="#fd79a8"/>
+<rect x="20" y="1274" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1294" font-size="15" font-weight="700" fill="#14181d">D1 · CAMERA LIVE LED</text>
+<text x="32" y="1308" font-size="11" fill="#5d6773">Visor front, beside camera</text>
+<text x="340" y="1328" font-size="12.5" text-anchor="end" fill="#14181d">anode (long leg)</text>
+<line x1="350" y1="1324" x2="604" y2="1324" stroke="#fd79a8" stroke-width="2.4"/>
+<circle cx="350" cy="1324" r="3.5" fill="#2c3e50"/><circle cx="604" cy="1324" r="5" fill="#fd79a8"/>
+<text x="340" y="1350" font-size="12.5" text-anchor="end" fill="#14181d">cathode</text>
+<line x1="350" y1="1346" x2="638" y2="1346" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="1346" r="3.5" fill="#2c3e50"/><circle cx="638" cy="1346" r="5" fill="#2c3e50"/>
+<rect x="20" y="1372" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1392" font-size="15" font-weight="700" fill="#14181d">U2 · Camera</text>
+<text x="32" y="1406" font-size="11" fill="#5d6773">Visor centre bridge, front</text>
+<text x="340" y="1426" font-size="12.5" text-anchor="end" fill="#14181d">5V (USB VBUS)</text>
+<line x1="350" y1="1422" x2="570" y2="1422" stroke="#e84393" stroke-width="2.4"/>
+<circle cx="350" cy="1422" r="3.5" fill="#2c3e50"/><circle cx="570" cy="1422" r="5" fill="#e84393"/>
+<text x="340" y="1448" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
+<line x1="350" y1="1444" x2="638" y2="1444" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="1444" r="3.5" fill="#2c3e50"/><circle cx="638" cy="1444" r="5" fill="#2c3e50"/>
+<rect x="20" y="1470" width="330" height="84" rx="9" fill="#f4f6f8" stroke="#2c3e50" stroke-width="1.6"/>
+<text x="32" y="1490" font-size="15" font-weight="700" fill="#14181d">U7 · Micro-OLED board</text>
+<text x="32" y="1504" font-size="11" fill="#5d6773">Visor crest bay</text>
+<text x="340" y="1524" font-size="12.5" text-anchor="end" fill="#14181d">5V in</text>
+<line x1="350" y1="1520" x2="502" y2="1520" stroke="#ff7f50" stroke-width="2.4"/>
+<circle cx="350" cy="1520" r="3.5" fill="#2c3e50"/><circle cx="502" cy="1520" r="5" fill="#ff7f50"/>
+<text x="340" y="1546" font-size="12.5" text-anchor="end" fill="#14181d">GND</text>
+<line x1="350" y1="1542" x2="638" y2="1542" stroke="#2c3e50" stroke-width="2.4"/>
+<circle cx="350" cy="1542" r="3.5" fill="#2c3e50"/><circle cx="638" cy="1542" r="5" fill="#2c3e50"/>
 </svg>

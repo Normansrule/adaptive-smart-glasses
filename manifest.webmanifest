@@ -1,7 +1,7 @@
 {
   "name": "Adaptive Smart Glasses",
   "short_name": "SmartGlasses",
-  "description": "3D model, print files, BOM and wiring for the camera-free, push-to-talk smart glasses prototype.",
+  "description": "3D model, print files, BOM, wiring and phone controls for open-source camera-passthrough smart glasses.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

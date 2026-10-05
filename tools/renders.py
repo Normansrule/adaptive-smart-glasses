@@ -14,25 +14,21 @@ def font(sz, bold=False):
     try: return ImageFont.truetype(FONTB if bold else FONT, sz)
     except OSError: return ImageFont.load_default()
 
-SPLAY, AX, AY, TZ = 6.05, 67.7, 11.55, 15.0
-def pod(side, y, z=0.0, x=3.0):
+SPLAY, AX, AY, TZ = 9.9, 61.2, 9.55, 12.0
+def temple_pt(side, y, z=0.0, x=0.0):
     t = math.radians(-SPLAY); xr = x*math.cos(t) - y*math.sin(t); yr = x*math.sin(t) + y*math.cos(t)
     return [side*(AX + xr), AY + yr, TZ + z]
-ELECTRONICS = [   # (label, xyz, colour)
-    ("ToF depth sensor", [0, 0, 25.5], "#4fc3f7"), ("BME280 (vented)", [30, 1, 24], "#81c784"),
-    ("PTT button", [-66.8, 3, 30.5], "#ff8a80"), ("Privacy LED", [-66.8, 0, 23.4], "#ff5252"),
-    ("Main power switch", [71, 4, -4], "#ffd54f"), ("Hinge tube (wires inside)", [AX, AY, TZ+3], "#bdbdbd"),
-    ("Battery 800 mAh", pod(1, 31), "#ffb74d"), ("Charger + 5V boost / USB-C", pod(1, 77, 0, 1), "#ffb74d"),
-    ("Mic (lid port)", pod(-1, 17, 0, 6), "#ce93d8"), ("IMU", pod(-1, 41, 0, 6), "#ce93d8"),
-    ("XIAO ESP32-S3 / USB-C", pod(-1, 81, 0, 6), "#e57373"), ("2x I2S amps", pod(-1, 28, 0, 0), "#90a4ae"),
-    ("Speaker grille", pod(-1, 74, -2, -3), "#90a4ae"),
-    ("Bone transducer", [-(AX + (-7)*math.cos(math.radians(-SPLAY)) - 111.5*math.sin(math.radians(-SPLAY))),
-                         AY + (-7)*math.sin(math.radians(-SPLAY)) + 111.5*math.cos(math.radians(-SPLAY)), TZ - 16.4], "#a1887f"),
-    ("Micro-OLED (slider)", [-31.5, -14.8, 48], "#fff176"), ("Combiner 30R/70T", [-31.5, -14.8, 6], "#80deea"),
+CELL = (98 + 24*math.cos(math.radians(55)), -24*math.sin(math.radians(55)))
+ELECTRONICS = [   # (label, xyz in assembly coords, colour)
+    ("Centre camera (12 MP)", [0, -36, 16.4], "#4fc3f7"), ("CAMERA LIVE LED", [16, -36, 25], "#ff5252"),
+    ("Design screen L", [34.5, -36, 2], "#81c784"), ("Design screen R", [-34.5, -36, 2], "#81c784"),
+    ("Micro-OLED eyepieces", [-31.5, -12, -2], "#fff176"), ("Power + camera switches, button", [22.5, -24, 31], "#ffd54f"),
+    ("Display driver board", [-8, -18, 23], "#ce93d8"), ("XIAO ESP32-S3 + IMU", [-2, -18, 12], "#e57373"),
+    ("Visor hinge (wires in tube)", [53.5, 3.3, 27.5], "#bdbdbd"), ("Brick cable in", [30, -20, 25], "#90a4ae"),
+    ("Cell L 200 mAh", temple_pt(1, CELL[0], CELL[1], 0), "#ffb74d"), ("Cell R 200 mAh", temple_pt(-1, CELL[0], CELL[1], 0), "#ffb74d"),
 ]
-PART_NAMES = {"frame": "Front frame", "temple_left": "Temple L · power", "temple_right": "Temple R · compute",
-              "lid_left": "Lid L", "lid_right": "Lid R", "ear_grip_left": "Ear grip L (TPU)", "ear_grip_right": "Ear grip R (TPU)",
-              "optics_tower": "HUD tower", "display_slider": "Display slider", "combiner_arm": "Combiner arm"}
+PART_NAMES = {"frame": "Slim frame", "temple_left": "Temple L", "temple_right": "Temple R", "ear_grip_left": "Ear grip L (TPU)",
+              "ear_grip_right": "Ear grip R (TPU)", "visor_shell": "Visor shell", "visor_back": "Visor back plate"}
 
 def callouts(img, pts, labels, colors=None, ring=False):
     d = ImageDraw.Draw(img); W, H = img.size; cx = sum(p[0] for p in pts)/len(pts); cy = sum(p[1] for p in pts)/len(pts)
@@ -65,23 +61,25 @@ async def viewer_shots():
         pg = await b.new_page(viewport={"width": 1700, "height": 1000}, color_scheme="dark")
         await pg.goto("http://127.0.0.1:8799/index.html"); await pg.wait_for_function("window.__ready && window.__ready()", timeout=90000)
         view = pg.locator("#view")
-        async def shot(name, v, k, hud, ghost=False, pts=None, pos=None):
-            await pg.evaluate(f"window.__setView('{v}', {k}, {str(hud).lower()}, {pos or 'null'})"); await pg.evaluate(f"window.__ghost({str(ghost).lower()})")
-            await pg.wait_for_timeout(1500); path = os.path.join(OUT, name); await view.screenshot(path=path)
+        async def shot(name, v, k=0, up=False, ghost=False, pts=None, pos=None, design=0):
+            await pg.evaluate(f"window.__setView('{v}', {k}, {str(up).lower()}, {pos or 'null'}, {design})")
+            await pg.evaluate(f"window.__ghost({str(ghost).lower()})")
+            await pg.wait_for_timeout(1800); path = os.path.join(OUT, name); await view.screenshot(path=path)
             return path, (await pg.evaluate("p => window.__project(p)", pts) if pts else None)
-        await shot("hero.png", "iso", 0, True)
-        await shot("front.png", "front", 0, True)
-        EXP = [-250, -300, 360]
-        centers = await pg.evaluate(f"(window.__setView('iso', 1, true, {EXP}), window.__partCenters())")
-        ids = list(centers); path, pts = await shot("exploded.png", "iso", 1, True, pts=[centers[i] for i in ids], pos=EXP)
-        callouts(Image.open(path).convert("RGB"), pts, [PART_NAMES[i] for i in ids]).save(path)
-        EL = [e for e in ELECTRONICS if "OLED" not in e[0] and "Combiner" not in e[0]]
-        path, pts = await shot("electronics.png", "iso", 0, False, ghost=True, pts=[e[1] for e in EL], pos=[240, 360, 260])
-        callouts(Image.open(path).convert("RGB"), pts, [e[0] for e in EL], [e[2] for e in EL]).save(path)
+        await shot("hero.png", "iso", pos=[-210, -250, 140])
+        await shot("front.png", "front", pos=[0, -300, 10])
+        await shot("front_rings.png", "front", pos=[0, -300, 10], design=1)
+        await shot("visor_up.png", "iso", up=True, pos=[-230, -230, 170])
+        EXP = [-260, -300, 330]
+        centers = await pg.evaluate(f"(window.__setView('iso', 1, false, {EXP}), window.__partCenters())")
+        ids = list(centers); path, pts = await shot("exploded.png", "iso", 1, pts=[centers[i] for i in ids], pos=EXP)
+        callouts(Image.open(path).convert("RGB"), pts, [PART_NAMES.get(i, i) for i in ids]).save(path)
+        path, pts = await shot("electronics.png", "iso", ghost=True, pts=[e[1] for e in ELECTRONICS], pos=[-250, -230, 190])
+        callouts(Image.open(path).convert("RGB"), pts, [e[0] for e in ELECTRONICS], [e[2] for e in ELECTRONICS]).save(path)
         await b.close()
 
 def gallery():
-    parts = ["frame", "temple_left", "temple_right", "lid_left", "ear_grip_right", "optics_tower", "display_slider", "combiner_arm", "tolerance_coupon"]
+    parts = ["visor_shell", "visor_back", "frame", "temple_left", "ear_grip_left", "tolerance_coupon"]
     tiles = []
     with tempfile.TemporaryDirectory() as td:
         for p in parts:

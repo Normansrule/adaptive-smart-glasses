@@ -1,0 +1,14 @@
+menu "Adaptive Smart Glasses"
+    config ASG_WIFI_SSID
+        string "Brick Wi-Fi hotspot SSID"
+        default "ASG-BRICK"
+    config ASG_WIFI_PASS
+        string "Brick Wi-Fi hotspot password"
+        default "glasses123"
+    config ASG_BRICK_IP
+        string "Brick IP address (hotspot gateway)"
+        default "10.42.0.1"
+    config ASG_BRICK_PORT
+        int "Brick UDP port for head pose + state"
+        default 5005
+endmenu

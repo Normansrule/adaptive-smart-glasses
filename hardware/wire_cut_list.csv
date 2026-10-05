@@ -1,10 +1,5 @@
 signal,wire,cut_length_mm,route
-5V_RAW,28 AWG red,170,U8 5V+ -> L pod front wall -> L hinge tube -> L endpiece groove -> SW1 COM
-5V_SW,28 AWG red,260,"SW1 -> brow groove -> R hinge tube -> R pod (D2, U6, U7)"
-GND,28 AWG black,360,"U8 5V- -> L hinge -> brow (taps: U4, U2 via Qwiic, D1) -> R hinge -> R pod"
-VBAT_SENSE,30 AWG green,360,U8 VBAT -> L hinge -> brow -> R hinge -> R2
-3V3/SDA/SCL,"Qwiic 100 mm cable, cut",200,U3 Qwiic -> R pod front -> R hinge tube -> brow -> U2 Qwiic A (splice; tap 3V3 to SW2 at R endpiece)
-3V3/SDA/SCL,Qwiic 50 mm pigtail,70,U2 Qwiic B -> brow -> U4 (solder 4 wires)
-MIC_3V3,30 AWG white,130,"SW2 pin 3 (R endpiece) -> R hinge -> R pod (U5 3V, D3)"
-BONE+/-,30 AWG twisted pair,90,U6 OUT -> R pod rear wall hole -> earpiece groove -> LS2 in grip
-SPK+/-,30 AWG twisted pair,50,U7 OUT -> LS1 (inside pod)
+BAT+ / GND (left cell),30 AWG red/black,230,BT1 -> earpiece groove -> L temple tube -> frame -> L visor tube -> SW1
+BAT+ / GND (right cell),30 AWG red/black,330,BT2 -> R temple tube -> brow groove -> L visor tube -> SW1
+Brick cable,HDMI + USB 4-core,1500,Pocket brick -> clip along left temple -> visor crest (left side)
+LCD harness,8 x 30 AWG,120,"U1 (bridge) -> U5 and U6 (shared SCK/MOSI/DC/BL/VCC/GND, own CS)"

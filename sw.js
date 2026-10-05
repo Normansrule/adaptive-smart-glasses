@@ -1,11 +1,10 @@
 // Offline cache for the installable viewer app. Bump VERSION after rebuilding models.
-const VERSION = 'asg-v1790969556';
+const VERSION = 'asg-v3';
 const CORE = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icons/icon.svg',
   'icons/icon-192.png', 'icons/icon-512.png', 'vendor/three/three.module.min.js',
   'vendor/three/addons/controls/OrbitControls.js', 'vendor/three/addons/loaders/STLLoader.js',
   'bom.csv', 'docs/img/wiring_power.svg', 'docs/img/wiring_signals.svg', 'docs/img/hinge.svg', 'cad/part_stats.json', 'cad/print_manifest.csv',
-  ...['frame','temple_left','temple_right','lid_left','lid_right','ear_grip_left','ear_grip_right',
-      'optics_tower','display_slider','combiner_arm'].map(p => `models/${p}.stl`)];
+  ...['frame','temple_left','temple_right','ear_grip_left','ear_grip_right','visor_shell','visor_back'].map(p => `models/${p}.stl`)];
 self.addEventListener('install', e => e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE)).then(() => self.skipWaiting())));
 self.addEventListener('activate', e => e.waitUntil(caches.keys().then(ks =>
   Promise.all(ks.filter(k => k !== VERSION).map(k => caches.delete(k)))).then(() => self.clients.claim())));

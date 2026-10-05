@@ -98,3 +98,14 @@ table.mini td:first-child { font-family: var(--mono); white-space: nowrap; }
 }
 
 .dia-img { width: 100%; background: #fff; border-radius: 8px; border: 1px solid var(--line); margin-bottom: 6px; }
+.brand h1 small { font-size: 11px; color: var(--accent); font-weight: 700; margin-left: 4px; }
+.hud-tools select { background: var(--bg2); color: var(--ink); border: 1px solid var(--line); border-radius: 9px; padding: 6px 8px; font: inherit; font-size: 13px; }
+button.big { width: 100%; padding: 12px; border-radius: 10px; border: 0; background: var(--accent); color: #fff; font-weight: 700; cursor: pointer; font-size: 15px; }
+.status { margin: 8px 0 4px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; font-size: 13px; color: var(--mute); }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.grid4 button { padding: 9px 4px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg2); cursor: pointer; font-size: 13px; }
+.grid4 button.on, .grid4 button:hover { border-color: var(--accent); }
+.row { display: flex; gap: 8px; align-items: center; margin-top: 10px; }
+.row input[type=range] { flex: 1; accent-color: var(--accent); }
+.row input:not([type]) { flex: 1; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg2); color: var(--ink); font: inherit; }
+.row button { padding: 8px 14px; border: 1px solid var(--accent); border-radius: 8px; background: transparent; cursor: pointer; }

@@ -1,82 +1,90 @@
-# Manufacturing guide (one unit, about one day)
+# Manufacturing guide (v0.2, one unit)
 
 ```
- PRINT ──► PREP BOARDS ──► BENCH-WIRE + TEST ──► HARNESS ──► ASSEMBLE ──► FACTORY TEST ──► QA SHEET
- (≈6 h)      (30 min)          (1 h)              (1 h)        (1 h)         (10 min)
+PRINT ──► BENCH (visor electronics) ──► BRICK ──► OPTICS ──► ASSEMBLE ──► SAFETY TEST ──► QA SHEET
 ```
 
-## 0 · What you need
-- **Bill of Materials (BOM):** [`BOM.md`](BOM.md) / [`../bom.csv`](../bom.csv)
+## 0 · You need
+- **Parts:** [`BOM.md`](BOM.md)
 - **Tools:**
   - Bambu Lab P1S (or A1 / A1 Mini)
-  - Soldering iron with a heat-set insert tip
-  - Flush cutters, wire strippers for 28–30 AWG, multimeter
-  - Calipers
-  - Tube cutter or razor saw, a 4 mm drill bit, a conical punch
-  - CA glue, Kapton tape, 1 mm foam tape
-- **Software:** OpenSCAD, Bambu Studio, ESP-IDF 5.5 (for the factory test)
+  - Soldering iron + heat-set tip
+  - Wire strippers for 30 AWG, multimeter, calipers
+  - Razor saw or tube cutter, 4.0 / 4.2 / 4.35 mm drills, conical punch
+  - CA glue, Kapton, 1 mm foam tape
+- **Software:** OpenSCAD, Bambu Studio, `esptool` (or ESP-IDF 5.5), Raspberry Pi OS on the brick
 
 ## 1 · Print
-| Plate | File | Material | Notes |
-|---|---|---|---|
-| 0 | `cad/plates/plate_0_tolerance_coupon.3mf` | PETG | **First.** Tune `config.scad`, then run `./tools/build.sh`. |
-| 1 | `cad/plates/plate_1_core_petg.3mf` | PETG | Frame, 2 temples, 2 lids. 0.16 mm layers, 4 walls. |
-| 2 | `cad/plates/plate_2_tpu_grips.3mf` | TPU 95A | Feed from the external spool, not the AMS. |
-| 3 | `cad/plates/plate_3_hud_petg_EXPERIMENTAL.3mf` | black PETG | Only for Phase 5. |
+| Plate | File | Material |
+|---|---|---|
+| 0 | `cad/plates/plate_0_tolerance_coupon.3mf` | PETG. **Print first.** Copy the fits that work into `config.scad`, then run `./tools/build.sh`. |
+| 1 | `cad/plates/plate_1_frame_temples_petg.3mf` | PETG, 0.16 mm, 4 walls |
+| 2 | `cad/plates/plate_2_visor_petg.3mf` | **Black** PETG (stops light leaking in) |
+| 3 | `cad/plates/plate_3_tpu_grips.3mf` | TPU 95A, external spool |
 
 **Post-process:**
-- Remove brims and stringing.
-- Ream the frame knuckle bores to a 4.35 mm running fit.
-- Drill the temple knuckle bores to a 4.05 mm glue fit.
-- Heat-set 1 M2 insert in each temple rib. Add 2 in the brow front only if you're building the HUD.
+- Frame: ream the temple knuckles to 4.35 mm (they turn) and the visor knuckles to 4.2 mm (friction holds the visor up).
+- Temples and visor knuckles: drill to 4.05 mm (the tubes are glued here).
+- Visor: heat-set 4 M2 inserts in the back bosses.
+- Frame: press the 6 × 3 magnet into the brow center.
 
-## 2 · Prepare the boards
-| Board | Action |
-|---|---|
-| U8 Adafruit 6106 | Cut the **ISET** jumper (500 mA charge). Desolder **R16** and solder the NTC leads to its pads. Don't fit the terminal block. Solder wires to the 5V+ / 5V− pads. |
-| U2 ToF | Nothing to do. It plugs in with Qwiic cables. |
-| U4 BME280 | Remove header pins if fitted. Check the chip says BME280 (the test reads ID 0x60). |
-| U5 Mic | Tie SEL to GND with a short wire. |
-| U6, U7 Amps | Leave GAIN open. Don't fit the screw terminals. Solder the speaker wires directly. |
-| U1 XIAO | Solder a Qwiic pigtail to 3V3 / GND / D4 / D5. |
-
-## 3 · Bench-wire and test (before anything goes into plastic)
-1. Wire everything flat on the bench, exactly per [`pinout.md`](pinout.md), with longer leads.
-2. Flash the factory test:
+## 2 · Bench: visor electronics (before anything goes into plastic)
+1. Wire the XIAO to both 1.69″ screens, the IMU, the hall switch, the button and the battery divider exactly as in [`pinout.md`](pinout.md). Tie the screen RST pins to 3V3.
+2. Flash the firmware:
    ```bash
-   . ~/esp/esp-idf/export.sh
-   cd firmware/factory_test
-   idf.py set-target esp32s3 build flash monitor
+   pip install esptool
+   esptool.py --chip esp32s3 write_flash 0x0 firmware/glasses_mcu/prebuilt/asg_glasses_mcu_merged.bin
    ```
-3. Every automatic check must PASS and both tones must be heard. Fix it here, not inside the frame.
+3. The serial monitor should show the self-test: IMU PASS and a battery voltage.
+4. Both screens should show animated eyes.
+5. Press the button to cycle designs. A magnet near the hall switch toggles visor DOWN/UP.
+6. Open the web app's **Glasses** tab, connect, and change the design and text from your phone.
 
-## 4 · Harness
-- Cut the wires from [`../hardware/wire_cut_list.csv`](../hardware/wire_cut_list.csv). Colours: red 5 V, black GND, green VBAT_SENSE, white MIC_3V3, Qwiic colours for I²C.
-- Cut two 13.5 mm brass tubes and deburr them inside and out.
-- **Thread the hinge wires through each tube before you solder the far ends.** Right tube: 7 wires. Left tube: 3.
+## 3 · Brick
+```bash
+git clone https://github.com/<you>/adaptive-smart-glasses && cd adaptive-smart-glasses
+bash brick/setup_brick.sh                 # OpenCV + the ASG-BRICK hotspot the visor joins
+python3 brick/passthrough.py              # camera -> side-by-side 3840x1080 fullscreen
+```
+- Test on a normal monitor first.
+- Unplug the camera: a red LIFT VISOR screen should appear in under 0.25 s.
 
-## 5 · Assemble (see [`README_CAD.md`](README_CAD.md))
-1. Glue each tube into its temple knuckle, push it up through the frame knuckle, and flare the top.
-2. Fit the frame electronics: ToF, BME280, PTT switch, LED + 1k, main switch. Press the wires into the brow groove and cover with Kapton.
-3. Left pod: charger on its pins (USB-C out the back), battery in its foam bay, NTC taped to the cell.
-4. Right pod:
-   - Inner layer: amps, speaker.
-   - Then a layer of foam.
-   - Outer layer: mic, IMU, XIAO, with D2/D3/R2–R4 sleeved in heat-shrink.
-5. Lids: hook the front tab, slide forward, fit 1 × M2×5.
-6. Push the grips on and press the bone transducer into the right grip.
-7. Stick the nose pads on.
+## 4 · Optics (EXPERIMENTAL)
+- Connect the dual micro-OLED kit's HDMI board to the Pi and set 3840×1080. Check the board's supported modes first.
+- Measure the eyepiece (diameter, length) and the driver board. Set `eyepiece_d`, `eyepiece_len` and `hdmi_board` in `config.scad`, then rebuild `visor_back` and `visor_shell`.
+- Set `ipd` to your pupil distance so the sleeves center on your eyes.
 
-## 6 · Factory test + QA sheet (record for every unit)
-| # | Check | Pass when | Result |
+## 5 · Assemble
+1. **Earpieces:**
+   - Charge both cells to 4.2 V separately.
+   - Lay each cell in its bay, leads toward the ear bend.
+   - Run the leads along the groove to the temple tube.
+2. **Hinges:**
+   - Thread the wires first.
+   - Glue a tube into each temple knuckle (13.5 mm) and each visor knuckle (12 mm).
+   - Push the tubes into the frame knuckles and flare the ends.
+   - The right cell's wires cross the brow groove to the left visor tube.
+3. **Visor:**
+   - Screens into their corner stops, facing out.
+   - Camera board behind the lens hole.
+   - LED + 1k next to the camera.
+   - Switches and button into the crest slots.
+   - XIAO + IMU in the bridge, HDMI board on the rails.
+   - Hall switch on the back plate, centered, facing the brow magnet.
+   - Eyepieces in the back-plate sleeves.
+   - Back plate on with 4 × M2×6.
+4. **Cable:** HDMI + USB into the crest, zip-tied to the internal bar, then clipped along the left temple.
+5. **Finish:** grips over the earpieces, nose pads on.
+
+## 6 · Safety test + QA sheet
+| # | Check | Pass when | ☐ |
 |---|---|---|---|
-| 1 | Factory test firmware | `RESULT: PASS` | ☐ |
-| 2 | Bone tone audible | Heard through the bone, not too loud | ☐ |
-| 3 | Outward tone audible | Heard, not too loud | ☐ |
-| 4 | Privacy LED | ON only while PTT is held | ☐ |
-| 5 | Mic rail with a meter (PTT released) | MIC_3V3 below 0.1 V | ☐ |
-| 6 | Charging | Orange LED on the charger, cell warm at most, USB-C reachable | ☐ |
-| 7 | Main switch | OFF kills the system and charging still works | ☐ |
-| 8 | Hinges | 20 folds each with continuity held (production sample: 2,000) | ☐ |
-| 9 | Fit | No pressure points after 15 min of wear. Nose and ears comfortable. | ☐ |
-| 10 | Edges | No sharp edges or burrs touching skin | ☐ |
+| 1 | Self-test | IMU PASS, battery 3.0–4.3 V | ☐ |
+| 2 | Designs | Eyes, rings, rainbow, text and off all work from both the button and the app | ☐ |
+| 3 | Camera kill | SW2 off: the LED is off and the brick sees no camera | ☐ |
+| 4 | Camera LED | On every time the camera has power | ☐ |
+| 5 | Stall fail-safe | Unplug the camera: red LIFT VISOR in under 0.25 s | ☐ |
+| 6 | Visor up | Both screen pairs go dark. The visor stays up by friction. | ☐ |
+| 7 | Hinges | 20 folds of each temple and 20 flips of the visor with battery continuity held | ☐ |
+| 8 | Latency | Film a stopwatch through the eyepiece: ≤ 120 ms | ☐ |
+| 9 | Comfort | 15 min seated, no hot spots, no pressure points | ☐ |

@@ -1,28 +1,21 @@
-# Wiring overview
+# Wiring overview (v0.2)
 
-**Every pin is in [`pinout.md`](pinout.md)** (generated from [`../hardware/netlist.csv`](../hardware/netlist.csv)). This page explains *why* it is wired this way.
+**Every pin is in [`pinout.md`](pinout.md)**, generated from [`../hardware/netlist.csv`](../hardware/netlist.csv). This page explains the rules behind it.
 
-![Power and privacy](img/wiring_power.svg)
+![Power and camera privacy](img/wiring_power.svg)
 
-## Three rules the wiring enforces
-1. **Mic privacy is physical.** 3V3 → PTT switch → MIC_3V3 is the only supply for the mic and the red LED. The 1N4148 lets the ESP32 *read* PTT but never drive the rail.
-2. **One switch kills the system and nothing else.** SW1 sits between the 5 V boost and everything else. The charger and its NTC cut-off keep working with it off.
-3. **Media is gated by the ESP32.** D6 = MEDIA_EN is driven LOW at boot. A future Pi only gets video when safety_policy allows it.
-
-## Power path
-USB-C → Adafruit 6106 (bq25185 charger with power path → TPS61023 5 V boost) → SW1 → 5V_SW → 1N5817 → XIAO 5V. The two amps take 5V_SW directly.
-- Charge at 500 mA (cut ISET). The NTC replaces R16. The protected cell adds over/under-voltage and short protection.
-- The boost stalls if the start-up load exceeds about 200 mA, so firmware keeps both amps in shutdown until it is running.
-
-## Through the hinges
-| Hinge | Conductors |
-|---|---|
-| Left (3) | 5V_RAW, GND, VBAT_SENSE |
-| Right (7) | 5V_SW, GND, VBAT_SENSE, 3V3, SDA, SCL, MIC_3V3 |
-
-The bundle is 2 × 28 AWG + 5 × 30 AWG silicone wire, about 36% of the 3.1 mm tube bore. See [`img/hinge.svg`](img/hinge.svg).
+## Rules the wiring enforces
+1. **Camera privacy is physical.** VBUS → SW2 → CAM_5V is the camera's only supply. The CAMERA LIVE LED (D1 + R1) sits on that rail. No GPIO touches it.
+2. **Only battery wires cross hinges.** Each temple tube carries its cell's BAT+ and GND. The left visor tube carries both pairs. Everything else (screens, camera, flex cables) lives inside the visor and never bends.
+3. **The brick powers the heavy parts.** The camera and the micro-OLED board run from the cable's 5 V (power-bank port 2), never from the earpiece cells. The cells only run the XIAO and the design screens.
+4. **The XIAO charges the cells.** Cable 5 V goes through a 1N5817 into the XIAO 5V pin, and its charger (≈100 mA) tops up the parallel cells through SW1.
 
 ![Signals](img/wiring_signals.svg)
 
-## Audio
-One I²S bus in full duplex: BCLK/WS are shared, D10 goes to both amps, the mic returns on D7. Each amp's SD pin selects BONE / OUTWARD / BOTH / MUTE. The output is mono, so one transducer and one speaker are enough. A second transducer can go in parallel (4 Ω is fine).
+## Data paths
+| Path | Link | Rate |
+|---|---|---|
+| Camera → brick | USB 2.0 UVC, MJPEG 1080p30 | 30 fps |
+| Brick → micro-OLEDs | HDMI, side by side 3840×1080 | 30–60 Hz |
+| Visor → brick | Wi-Fi UDP to `10.42.0.1:5005`: head pose, battery, visor state, AR mode (44-byte packet) | 100 Hz |
+| Phone ↔ visor | BLE GATT `7a1e0000-…` (design, brightness, text, AR mode, status) | on change / 0.5 Hz |

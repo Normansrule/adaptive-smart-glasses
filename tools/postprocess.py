@@ -14,10 +14,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MATERIAL = {"ear_grip_left": "TPU 95A", "ear_grip_right": "TPU 95A"}
 DENSITY = {"PETG": 1.27, "TPU 95A": 1.21}
 PLATES = {
-    "plate_1_core_petg": ["frame", "temple_left", "temple_right", "lid_left", "lid_right"],
-    "plate_2_tpu_grips": ["ear_grip_left", "ear_grip_right"],
-    "plate_3_hud_petg_EXPERIMENTAL": ["optics_tower", "display_slider", "combiner_arm"],
     "plate_0_tolerance_coupon": ["tolerance_coupon"],
+    "plate_1_frame_temples_petg": ["frame", "temple_left", "temple_right"],
+    "plate_2_visor_petg": ["visor_shell", "visor_back"],
+    "plate_3_tpu_grips": ["ear_grip_left", "ear_grip_right"],
 }
 BED = 256.0
 
@@ -136,6 +136,8 @@ def main(tmp):
     for fn in sorted(os.listdir(tmp)):
         if not fn.endswith(".stl"): continue
         name = fn[:-4]; tris = read_stl(os.path.join(tmp, fn))
+        rk = lambda q: (round(q[0], 4), round(q[1], 4), round(q[2], 4))
+        tris = [t for t in tris if len({rk(q) for q in t}) == 3]      # drop degenerate slivers
         if name.startswith("asm_"):
             write_stl(os.path.join(ROOT, "models", name[4:] + ".stl"), tris, name)
             continue

@@ -1,3 +1,5 @@
+> **Note:** this is the original v0.1 master brief (camera-free). v0.2 deliberately changes direction: camera passthrough, outward design screens, flip-up visor. See [design_changes.md](design_changes.md) and [requirements.md](requirements.md).
+
 # ADAPTIVE SMART GLASSES — MASTER BUILD BRIEF (paste into a new chat; attach CAD + BOM files)
 
 You are continuing a real, buildable wearable prototype — not a rendering. Read all of this
